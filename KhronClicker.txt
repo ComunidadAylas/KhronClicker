@@ -205,7 +205,7 @@ Shinies
 		movement:onLeft moveRight fade bounce:0.01
 		frequency:60
 		frequency variation:120
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111285186303365130/pinguino_adorable.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/pinguino_adorable_256.png
 		duration: 5
  
 		class:bigButton
@@ -215,11 +215,11 @@ Shinies
 			if (chance(90%))
 				//Al menos 5, o entre 1 y 3 minutos de producción de Khrones
 				$amount=max(5,random(khrones:ps*60*1,khrones:ps*60*3))*$boost
-				toast El Pingüinito te bendice con<//><b>[$amount] Ꝃhrones</b>.
+				toast ¡El pingüino te bendice con<//><b>[$amount] Ꝃhrones</b>!
 				yield $amount khrones
 			else
 				$amount=1
-				toast ¡El Pingüinito ha atraído a <//><b>[$amount] Donante[s?$amount]</b> de Khron!
+				toast ¡El pingüino ha atraído a <//><b>[$amount] Donante[s?$amount]</b> de Khron!
 				yield 1 Donante
 			end
 		end
@@ -229,18 +229,17 @@ Shinies
 		movement:onRight moveLeft fade bounce:0.05
 		frequency:240
 		frequency variation:180
-		icon:https://cdn.discordapp.com/attachments/1109612171572285470/1110989203057164288/loro_adorable256x256.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/loro_adorable_256.png
 		class:bigButton
 		on click:
 			$boost=1
 			if (have LoroMejora3) $boost=3
 			if (chance(10%))
-				//Al menos 10, o entre 15 y 30 minutos de producción de Khrones
-				$amount=max(10,random(khrones:ps*60*15,khrones:ps*60*30))*$boost
-				toast ¡El Loro te bendice con<//><b>[$amount] Ꝃhrones</b>!
-				yield $amount khrones
+				$amount=1
+				toast ¡El Loro ha atraído a <//><b>[$amount] Donante[s?$amount]</b> de Khron!
+				yield 1 Donante
 			else
-				$amount=5*$boost
+				$amount=7*$boost
 				toast ¡El Loro te bendice con<//><b>[$amount] Esmeralda[s?$amount]</b> de Khron!
 				yield $amount EsmeraldaKhron
 			end
@@ -251,7 +250,7 @@ Shinies
 		movement:anywhere pulse fade
 		frequency:420
 		frequency variation:180
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111618573681561660/corazon_arcoiris_256.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/corazon_arcoiris_256.png
 		duration: 30
 		class:bigButton
 		on click:
@@ -260,11 +259,11 @@ Shinies
 			if (chance(50%))
 				//Al menos 15, o entre 30 y 60 minutos de producción de Khrones
 				$amount=max(15,random(khrones:ps*60*30,khrones:ps*60*60))*$boost
-				toast El Corasoncito te bendice con <//><b>[$amount] Ꝃhrones</b>.
+				toast ¡El corazón te bendice con <//><b>[$amount] Ꝃhrones</b>!
 				yield $amount khrones
 			else
 				$amount=1*$boost
-				toast ¡El Corasonsito te bendice con<//><b>[$amount] Donante[s?$amount]</b> de Khron!
+				toast ¡El Corazón te bendice con<//><b>[$amount] Donante[s?$amount]</b> de Khron!
 				yield $amount Donante
 			end
 		end
@@ -276,7 +275,7 @@ Buildings
 	*AlexTMjugador|AlexTMjugador
 		name:AlexTMjugador|AlexTMjugador
 		desc:Un programador procrastinador. ¿Será capaz de hacer el plugin de economía?<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKAlex:ps] Ꝃhrones</#></b> por segundo. <.><#808080>Solo puedes tener un AlexTMjugador.</#>
-		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907054811938906/0.AlexTMjugador48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/alextmjugador.png
 		cost:10 khrones
 		on tick:yield 0.01 khron
 		on tick:yield 0.01 RKAlex
@@ -286,7 +285,7 @@ Buildings
 	*Allay|Allays
 		name:Allay|Allays
 		desc:Un mob servicial que te puede encontrar Ꝃhrones y, de vez en cuando, una esmeralda de Khron.<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKAllay:ps] Ꝃhrones</#></b> por segundo. <.>También producen <b><#5AC552>[REAllay:ps] esmeraldas de Khron</#></b> por segundo.
-		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907080795672586/1.Allay48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/allay.png
 		cost:25 khrones
 		on tick:yield 0.1 khron
 		on tick:yield 0.1 RKAllay
@@ -299,7 +298,7 @@ Buildings
 	*Aldeano|Aldeanos
 		name:Aldeano|Aldeanos
 		desc:Obedientes aldeanos que pueden conseguir Ꝃhrones y esmeraldas de diversas maneras.<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKAldeano:ps] Ꝃhrones</#></b> por segundo. <.>Produciendo un total de <b><#5AC552>[REAldeano:ps] esmeraldas de Khron</#></b> por segundo.
-		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907101469392946/2.Aldeano48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/aldeano.png
 		cost:100 khrones
 		on tick:yield 1 khrones
 		on tick:yield 0.1 RKAldeano
@@ -314,7 +313,7 @@ Buildings
 	*Jugador|Jugadores
 		name:Jugador|Jugadores
 		desc:Jugadores activos del servidor que puedes contratar para que te consigan más Ꝃhrones y alguna que otra esmeralda de Khron.<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKJugador:ps] Ꝃhrones</#></b> por segundo. <.>Produciendo un total de <b><#5AC552>[REJugador:ps] esmeraldas de Khron</#></b> por segundo.
-		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907117697146900/3.Steve_and_Alex48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/jugadores.png
 		cost:500 khrones
 		on tick:yield 5 khrones
 		on tick:yield 5 RKJugador
@@ -335,7 +334,7 @@ Buildings
 	*Donante|Donantes
 		name:Donante de Khron|Donantes de Khron
 		desc:Estas buenas personas colaboran y ayudan económicamente al servidor de Khron, por lo que sus divisas reales se transforman en Ꝃhrones.<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKDonante:ps] Ꝃhrones</#></b> por segundo. <.>Produciendo un total de <b><#5AC552>[REDonante:ps] esmeraldas de Khron</#></b> por segundo.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111617274651090974/corazon_arcoiris.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/corazon_arcoiris_48.png
 		no buy
 		on tick:yield 20 khrones
 		on tick:yield 20 RKDonante
@@ -346,7 +345,7 @@ Buildings
 	*Cultivo|Cultivos
 		name:Cultivo|Cultivos
 		desc:Grandes cultivos para plantar y vender comida por Ꝃhrones a todos los habitantes.<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKCultivo:ps] Ꝃhrones</#></b> por segundo. <.>Produciendo un total de <b><#5AC552>[RECultivo:ps] esmeraldas de Khron</#></b> por segundo.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111714239695044748/trigo.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/trigo.png
 		cost:10000 khrones
 		on tick:yield 20 khrones
 		on tick:yield 20 RKCultivo
@@ -357,7 +356,7 @@ Buildings
 	*Granja|Granjas
 		name:Granja de Mobs|Granjas de Mobs
 		desc:Granjas que aprovechan el spawn de criaturas para obtener materiales que puedes cambiar por Ꝃhrones.<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKGranja:ps] Ꝃhrones</#></b> por segundo.
-		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907133723578408/4.GranjaDeMobs48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/granja_mobs.png
 		cost:50000 khrones
 		on tick:yield 50 khrones
 		on tick:yield 50 RKGranja
@@ -366,7 +365,7 @@ Buildings
 	*Magia|Magias
 		name:Encantamiento|Encantamientos
 		desc:¿Para qué encantar arcos cuando puedes encantar tu cartera con Infinidad? ¡Ꝃhrones invocados por arte de magia!<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKMagia:ps] Ꝃhrones</#></b> por segundo. <.>Produciendo un total de <b><#5AC552>[REMagia:ps] esmeraldas de Khron</#></b> por segundo.
-		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907152392425472/5.Mesa_de_Encantamientos48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/mesa_encantamientos_animada.gif
 		cost:123456 khrones
 		on tick:yield 123 khrones
 		on tick:yield 123 RKMagia
@@ -377,7 +376,7 @@ Buildings
 	*Negocio|Negocios
 		name:Negocio de Khron|Negocios de Khron
 		desc:Establecimientos de Khron que pueden generar ingresos<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKNegocio:ps] Ꝃhrones</#></b> por segundo. <.>Produciendo un total de <b><#5AC552>[RENegocio:ps] esmeraldas de Khron</#></b> por segundo.
-		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907170339860520/6.NegociosDeKhron48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/tienda.png
 		cost:300000 khrones, 20 EsmeraldaKhron
 		on tick:yield 250 khrones
 		on tick:yield 250 RKNegocio
@@ -388,7 +387,7 @@ Buildings
 	*Banco|Bancos
 		name:Banco de Khron|Bancos de Khron
 		desc:¿Qué mejor forma de obtener Ꝃhrones que generando intereses y cobrando comisiones?<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKBanco:ps] Ꝃhrones</#></b> por segundo. <.>Produciendo un total de <b><#5AC552>[REBanco:ps] esmeraldas de Khron</#></b> por segundo.
-		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907197233737748/7.BancoDeKhron48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billetes.png
 		cost:1250000 khrones, 50 EsmeraldasKhron
 		on tick:yield 1000 khrones
 		on tick:yield 1000 RKBanco
@@ -399,7 +398,7 @@ Buildings
 	*Ayuntamiento|Ayuntamientos
 		name:Ayuntamientos de Khron|Ayuntamientos de Khron
 		desc:Ahora que gestionas los ayuntamientos de Khron, ¿qué tal si intentas gobernarlos?<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKAyuntamiento:ps] Ꝃhrones</#></b> por segundo. <.><#808080>Desbloqueas los distintos ayuntamientos comprando las mejoras que aparecen teniendo ciertos diputados.</#>
-		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907226849726514/8.AyuntamientoDeVerdalia48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/bandera_verdalia_soporte.png
 		cost:10000000 khrones, 1000 EsmeraldasKhron
 		on tick:yield 2023 khrones
 		on tick:yield 2023 RKAyuntamiento
@@ -409,7 +408,7 @@ Buildings
 	*Idos
 		name:Idos
 		desc:La Deidad suprema. Tus logros económicos han llamado su atención y quiere bendecirnos a todos con Ꝃhrones a diestro y siniestro.<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKIdos:ps] Ꝃhrones</#></b> por segundo. <.>Produciendo un total de <b><#5AC552>[REIdos:ps] esmeraldas de Khron</#></b> por segundo. <.><#808080>¿Qué esperabas? Solo puedes tener un Idos. Es único.</#>
-		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907267291205642/10.Idos48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/idos.png
 		on tick:yield 100000 khrones
 		on tick:yield 100000 RKIdos
 		on tick:yield 1000 EsmeraldaKhron
@@ -427,7 +426,7 @@ Upgrades
 	*RatonMejora1
 		name:Raton_Mejora1
 		desc:Raton_Mejora1<//><b>Efecto:</b><.>Aumenta los Ꝃhrones por clic en <b>1 más</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111295994701819944/cursor.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/cursor.png
 		cost:100 khrones
 		passive:increase khron yield of KhronButton by 1
 		req:10 khrones:earned
@@ -435,7 +434,7 @@ Upgrades
 	*RatonMejora2
 		name:Raton_Mejora2
 		desc:Raton_Mejora2<//><b>Efecto:</b><.>Aumenta los Ꝃhrones por clic en <b>2 más</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111295994701819944/cursor.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/cursor.png
 		cost:500 khrones
 		passive:increase khron yield of KhronButton by 2
 		req:500 khrones:earned
@@ -443,7 +442,7 @@ Upgrades
 	*RatonMejora3
 		name:Raton_Mejora3
 		desc:Raton_Mejora3<//><b>Efecto:</b><.>Aumenta los Ꝃhrones por clic en <b>4 más</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111295994701819944/cursor.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/cursor.png
 		cost:2500 khrones
 		passive:increase khron yield of KhronButton by 4
 		req:2500 khrones:earned
@@ -451,7 +450,7 @@ Upgrades
 	*RatonMejora4
 		name:Raton_Mejora4
 		desc:Raton_Mejora4<//><b>Efecto:</b><.>Aumenta los Ꝃhrones por clic en <b>8 más</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111295994701819944/cursor.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/cursor.png
 		cost:8000 khrones
 		passive:increase khron yield of KhronButton by 8
 		req:8000 khrones:earned
@@ -459,7 +458,7 @@ Upgrades
 	*RatonMejora5
 		name:Raton_Mejora5
 		desc:Raton_Mejora4<//><b>Efecto:</b><.>Aumenta los Ꝃhrones por clic en <b>16 más</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111295994701819944/cursor.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/cursor.png
 		cost:16000 khrones
 		passive:increase khron yield of KhronButton by 16
 		req:16000 khrones:earned
@@ -467,7 +466,7 @@ Upgrades
 	*RatonMejora6
 		name:Raton_Mejora6
 		desc:Raton_Mejora6<//><b>Efecto:</b><.>Aumenta los Ꝃhrones por clic en <b>32 más</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111295994701819944/cursor.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/cursor.png
 		cost:32000 khrones
 		passive:increase khron yield of KhronButton by 32
 		req:32000 khrones:earned
@@ -475,7 +474,7 @@ Upgrades
 	*RatonMejora7
 		name:Raton_Mejora7
 		desc:Raton_Mejora7<//><b>Efecto:</b><.>Aumenta los Ꝃhrones por clic en <b>64 más</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111295994701819944/cursor.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/cursor.png
 		cost:64000 khrones
 		passive:increase khron yield of KhronButton by 64
 		req:64000 khrones:earned
@@ -483,7 +482,7 @@ Upgrades
 	*RatonMejora8
 		name:Raton_Mejora8
 		desc:Raton_Mejora8<//><b>Efecto:</b><.>Aumenta los Ꝃhrones por clic en <b>128 más</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111295994701819944/cursor.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/cursor.png
 		cost:128000 khrones
 		passive:increase khron yield of KhronButton by 128
 		req:128000 khrones:earned
@@ -491,7 +490,7 @@ Upgrades
 	*RatonMejora9
 		name:Raton_Mejora9
 		desc:Raton_Mejora9<//><b>Efecto:</b><.>Aumenta los Ꝃhrones por clic en <b>256 más</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111295994701819944/cursor.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/cursor.png
 		cost:256000 khrones
 		passive:increase khron yield of KhronButton by 256
 		req:256000 khrones:earned
@@ -499,7 +498,7 @@ Upgrades
 	*RatonMejora10
 		name:Raton_Mejora10
 		desc:Raton_Mejora10<//><b>Efecto:</b><.>Aumenta los Ꝃhrones por clic en <b>512 más</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111295994701819944/cursor.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/cursor.png
 		cost:512000 khrones
 		passive:increase khron yield of KhronButton by 512
 		req:512000 khrones:earned
@@ -507,7 +506,7 @@ Upgrades
 	*RatonMejora11
 		name:Raton_Mejora11
 		desc:Raton_Mejora11<//><b>Efecto:</b><.>Multiplica los Ꝃhrones por clic en <b>5</b>. <.>Aumenta la producción de Ꝃhrones en un <b>2%</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111295994701819944/cursor.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/cursor.png
 		cost:1024000 khrones
 		passive:multiply khron yield of KhronButton by 5
 		passive:multiply yield of khrones by 1.02
@@ -516,24 +515,24 @@ Upgrades
 	*RatonMejora12
 		name:Raton_Mejora12
 		desc:Raton_Mejora12<//><b>Efecto:</b><.>Multiplica los Ꝃhrones por clic en <b>10</b>. <.>Aumenta la producción de Ꝃhrones en un <b>5%</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111295994701819944/cursor.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/cursor.png
 		cost:2048000 khrones
 		passive:multiply khron yield of KhronButton by 10
 		passive:multiply yield of khrones by 1.05
 		req:2048000 khrones:earned
  
-	//building upgrades
+	//Mejoras de construcciones
  
-	*AlexUpgrade1
+	*AlexMejora1
 		name:Descubriendo un nuevo juego
 		desc:Alex ha descubierto Khron Clicker. ¿Seguirá procrastinando ahora en el juego o le motivará a hacer cosas para Khron, como la economía?<//><b>Efecto:</b><.>Alex es el <b>doble</b> de eficiente.
-		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907054811938906/0.AlexTMjugador48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/khron_clicker_48.png
 		cost:100 khrones
 		passive:increase yield of AlexTMjugador by 0.01
 		req:(AlexTMjugador>=1)
 		req:50 khrones:earned
 
-	*AlexUpgrade2
+	*AlexMejora2
 		name:Como los chorros del oro
 		desc:Con un poco de optimización por allí y por allá, Alex ha dejado las configuraciones de los plugins y del servidor como la patena.<//><b>Efecto:</b><.>Alex es el <b>doble</b> de eficiente.
 		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907054811938906/0.AlexTMjugador48x48.png
@@ -542,10 +541,10 @@ Upgrades
 		req:(AlexTMjugador>=1)
 		req:1000 khrones:earned
  
-	*AlexUpgrade3
+	*AlexMejora3
 		name:Servidor 24/7
 		desc:Con la infraestructura montada del servidor de Khron, ahora estará disponible todos los días a cualquier hora. ¡Viva!<//><b>Efecto:</b><.>Alex genera <b>1 Ꝃhron</b> adicional por segundo. <.>Aumenta la producción de Ꝃhrones en un <b>1%</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907054811938906/0.AlexTMjugador48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/servidor.png
 		cost:250000 khrones
 		passive:increase yield of AlexTMjugador by 1
 		passive:multiply yield of khrones by 1.01
@@ -565,10 +564,10 @@ Upgrades
 		req:(AlexTMjugador>=1)
 		req:100000 khrones:earned
  
-	*AlexUpgrade4
+	*AlexMejora4
 		name:TiempoReal
 		desc:Con la hora y el clima adaptados a la realidad, los jugadores se quedan más tiempo conectados presenciando la puesta de sol. También se sienten un poco más motivados a comprar cosas antes de que cierren las tiendas.<//><b>Efecto:</b><.>Alex genera <b>10 Ꝃhrones</b> adicionales por segundo. <.>Aumenta la producción de Ꝃhrones en un <b>2%</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110635738518786078/reloj_digital.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/reloj_bolsillo.png
 		cost:1000000 khrones
 		passive:increase yield of AlexTMjugador by 9
 		passive:multiply yield of khrones by 1.02
@@ -588,10 +587,10 @@ Upgrades
 		req:(AlexTMjugador>=1)
 		req:1000000 khrones:earned
  
-	*AlexUpgrade5
+	*AlexMejora5
 		name:Plugin de experiencia
 		desc:Con un plugin de niveles y experiencia de Khron, los jugadores se sienten más motivados a conectarse, y por lo tanto, a hacer más uso de la economía base.<//><b>Efecto:</b><.>Alex genera <b>100 Ꝃhrones</b> adicionales por segundo. <.>Aumenta la producción de Ꝃhrones en un <b>3%</b>. <.>Multiplica los Ꝃhrones por clic en <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907054811938906/0.AlexTMjugador48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/frasco_experiencia.png
 		cost:10000000 khrones
 		passive:increase yield of AlexTMjugador by 90
 		passive:multiply yield of khrones by 1.03
@@ -612,10 +611,10 @@ Upgrades
 		req:(AlexTMjugador>=1)
 		req:5000000 khrones:earned
 
-	*AlexUpgrade6
+	*AlexMejoraFinal
 		name:Ekhronomía
 		desc:Por fin Alex ha hecho lo que todos los jugadores de Khron esperaban: el plugin de economía. Con una economía robusta, estable y funcional, ¡todo el mundo puede usarla sin límites!<//><b>Efecto:</b><.>Alex ahora genera <b>1.000 Ꝃhrones</b> adicionales por segundo <.>Aumenta la producción de Ꝃhrones en un <b>25%</b>. <.>Aumenta la producción de esmeraldas de Khron en un <b>5%</b>. <.>Multiplica los Ꝃhrones por clic en <b>5</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110635737038200852/billete_un_khron.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/moneda_khron_retro.png
 		cost:25000000 khrones, 1000 EsmeraldasKhron
 		passive:increase yield of AlexTMjugador by 900
 		passive:multiply yield of khrones by 1.25
@@ -646,92 +645,93 @@ Upgrades
 		req:(AlexTMjugador>=1)
 		req:10000000 khrones:earned
 
-	*AllayUpgrade1
+	*AllayMejora1
 		name:Allay_Mejora1
 		desc:Allay_Mejora1<//><b>Efecto:</b><.>La producción de los Allays se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110635908572655666/small_amethyst_bud.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/amatista_brote_pequeño.png
 		cost:250 khrones
 		passive:multiply yield of Allay by 2
 		req:(Allays>=1)
  
-	*AllayUpgrade2
+	*AllayMejora2
 		name:Allay_Mejora2
 		desc:Allay_Mejora2<//><b>Efecto:</b><.>La producción de los Allays se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110635908954329180/medium_amethyst_bud.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/amatista_brote_mediano.png
 		cost:2500 khrones
 		passive:multiply yield of Allay by 2
 		req:(Allays>=10)
  
-	*AllayUpgrade3
+	*AllayMejora3
 		name:Allay_Mejora3
 		desc:Allay_Mejora3<//><b>Efecto:</b><.>La producción de los Allays se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110635909214371942/large_amethyst_bud.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/amatista_brote_grande.png
 		cost:6250 khrones
 		passive:multiply yield of Allay by 2
 		req:(Allays>=25)
  
-	*AllayUpgrade4
+	*AllayMejora4
 		name:Allay_Mejora4
 		desc:Allay_Mejora4<//><b>Efecto:</b><.>La producción de los Allays se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110635909491200010/amethyst_cluster.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/amatista_cumulo.png
 		cost:12500 khrones
 		passive:multiply yield of Allay by 2
 		req:(Allays>=50)
 
-	*AllayUpgrade5
+	*AllayMejora5
 		name:Allay_Mejora5
 		desc:Allay_Mejora5<//><b>Efecto:</b><.>La producción de los Allays se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637310644584468/diamante_khron48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/diamante_khron.png
 		cost:25000 khrones
 		passive:multiply yield of Allay by 2
 		req:(Allays>=100)
 
 	*AllayMejoraFinal
 		name:Mejores amigos
-		desc:Los Allays y los Loros tienen una cosa en común: ¡les encanta bailar, se han hecho buenos amigos y ahora se comparten cosas! Además, los Allays también ayudan en los cultivos cosechando y recogiendo.<//><b>Efecto:</b><.>Los Allays son el <b>doble</b> de eficientes produciendo esmeraldas. <.>La producción de los cultivos se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110217531601469522/MejoraLorito48x48.png
+		desc:Los Allays y los Loros tienen una cosa en común: ¡les encanta bailar, se han hecho buenos amigos y ahora se comparten cosas! Además, los Allays también ayudan en los cultivos cosechando y recogiendo.<//><b>Efecto:</b><.>Los Allays son el <b>doble</b> de eficientes produciendo esmeraldas. <.>La producción de los cultivos se multiplica por <b>2</b>. <.>Los Loros aparecen con un <b>5%</b> más de frecuencia.
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/loro_brillante.png
 		cost:50000 khrones, 5000 EsmeraldasKhron
 		passive:multiply khron yield of KhronButton by 3
+		passive:multiply frequency of Loro by 0.95
 		req:1000 EsmeraldasKhron:earned
 		req:(Allays>=100)
 		req:(Cultivos>=25)
  
-	*AldeanoUpgrade1
+	*AldeanoMejora1
 		name:Aldeano_Mejora1
 		desc:Aldeano_Mejora1<//><b>Efecto:</b><.>La producción de los Aldeanos se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636676730069094/copper_ingot.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/lingote_cobre.png
 		cost:1000 khrones
 		passive:multiply yield of Aldeano by 2
 		req:(Aldeano>=1)
  
-	*AldeanoUpgrade2
+	*AldeanoMejora2
 		name:Aldeano_Mejora2
 		desc:Aldeano_Mejora2<//><b>Efecto:</b><.>La producción de los Aldeanos se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636677099180072/iron_ingot.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/lingote_hierro.png
 		cost:10000 khrones
 		passive:multiply yield of Aldeano by 2
 		req:(Aldeano>=10)
  
-	*AldeanoUpgrade3
+	*AldeanoMejora3
 		name:Aldeano_Mejora3
 		desc:Aldeano_Mejora3<//><b>Efecto:</b><.>La producción de los Aldeanos se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636677300486285/gold_ingot.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/lingote_oro.png
 		cost:25000 khrones
 		passive:multiply yield of Aldeano by 2
 		req:(Aldeano>=25)
  
-	*AldeanoUpgrade4
+	*AldeanoMejora4
 		name:Aldeano_Mejora4
 		desc:Aldeano_Mejora4<//><b>Efecto:</b><.>La producción de los Aldeanos se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109612171572285470/1110989177396400178/esmeralda_khron48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/esmeralda_khron.png
 		cost:50000 khrones
 		passive:multiply yield of Aldeano by 2
 		req:(Aldeano>=50)
 
-	*AldeanoUpgrade5
+	*AldeanoMejora5
 		name:Aldeano_Mejora5
 		desc:Aldeano_Mejora5<//><b>Efecto:</b><.>La producción de los Aldeanos se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637310644584468/diamante_khron48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/diamante_khron.png
 		cost:100000 khrones
 		passive:multiply yield of Aldeano by 2
 		req:(Aldeano>=100)
@@ -739,98 +739,99 @@ Upgrades
 	*AldeanoMejoraFinal
 		name:Aldeano_MejoraFinal
 		desc:Los aldeanos ahora trabajan también en los negocios de Khron y ambas partes se benefician: los negocios tienen más recursos y manos de obra, mientras que los aldeanos obtienen más esmeraldas.<//><b>Efecto:</b><.>Los Aldeanos son el <b>doble</b> de eficientes produciendo esmeraldas. <.>La producción de los Negocios se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907170339860520/6.NegociosDeKhron48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/cafe.png
 		cost:200000 khrones, 10000 EsmeraldasKhron
 		passive:multiply yield of Negocio by 2
 		req:(Aldeano>=100)
 		req:10000 EsmeraldasKhron:earned
  
-	*JugadorUpgrade1
+	*JugadorMejora1
 		name:Jugador_Mejora1
 		desc:Jugador_Mejora1<//><b>Efecto:</b><.>La producción de los Jugadores se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636201196650497/espada_fuego.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/espada_roja.png
 		cost:5000 khrones
 		passive:multiply yield of Jugador by 2
 		req:(Jugadores>=1)
  
-	*JugadorUpgrade2
+	*JugadorMejora2
 		name:Jugador_Mejora2
 		desc:Jugador_Mejora2<//><b>Efecto:</b><.>La producción de los Jugadores se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111603861904424990/espada_naranja.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/espada_naranja.png
 		cost:50000 khrones
 		passive:multiply yield of Jugador by 2
 		req:(Jugadores>=10)
  
-	*JugadorUpgrade3
+	*JugadorMejora3
 		name:Jugador_Mejora3
 		desc:Jugador_Mejora3<//><b>Efecto:</b><.>La producción de los Jugadores se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636201477673100/espada_trueno.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/espada_amarilla.png
 		cost:125000 khrones
 		passive:multiply yield of Jugador by 2
 		req:(Jugadores>=25)
  
-	*JugadorUpgrade4
+	*JugadorMejora4
 		name:Jugador_Mejora4
 		desc:Jugador_Mejora4<//><b>Efecto:</b><.>La producción de los Jugadores se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636201691578529/espada_naturaleza.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/espada_verde.png
 		cost:250000 khrones
 		passive:multiply yield of Jugador by 2
 		req:(Jugadores>=50)
 
-	*JugadorUpgrade5
+	*JugadorMejora5
 		name:Jugador_Mejora5
 		desc:Jugador_Mejora5<//><b>Efecto:</b><.>La producción de los Jugadores se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636200890482718/espada_agua.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/espada_azul.png
 		cost:500000 khrones
 		passive:multiply yield of Jugador by 2
 		req:(Jugadores>=100)
 
 	*JugadorMejoraFinal
 		name:Los Sabios
-		desc:Los jugadores más expertos de todo Khron ahora colaboran y ayudan en otras construcciones, aplicando todo lo que han adquirido en todo este tiempo de juego.<//><b>Efecto:</b><.>La producción de los Granjas se multiplica por <b>1,5</b>. <.>La producción de las Mesas de encantamiento se multiplica por <b>1,5</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636477118959676/experience_bottle.png
+		desc:Los jugadores más expertos de todo Khron ahora colaboran y ayudan en otras construcciones, aplicando todos los conocimientos que han adquirido en este tiempo.<//><b>Efecto:</b><.>La producción de los cultivos se multiplica por <b>1,5</b>. <.>La producción de las granjas de mobs se multiplica por <b>1,5</b>. <.>La producción de las mesas de encantamiento se multiplica por <b>1,5</b>.
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/frasco_experiencia.png
 		cost:1000000 khrones, 50000 EsmeraldasKhron
+		passive:multiply yield of Cultivo by 1.5
 		passive:multiply yield of Granja by 1.5
 		passive:multiply yield of Magia by 1.5
 		req:(Jugadores>=100)
 		req:50000 EsmeraldasKhron:earned
 
-	*DiputadoUpgrade1
+	*DiputadoMejora1
 		name:Diputado_Mejora1
 		desc:Diputado_Mejora1<//><b>Efecto:</b><.>La producción de los Diputados se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/431498547784056850/1111318708091097158/Builds_Diputados_Icono48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/diputado.png
 		cost:10000 khrones
 		passive:multiply yield of Diputados by 2
 		req:(Diputados>=1)
  
-	*DiputadoUpgrade2
+	*DiputadoMejora2
 		name:Diputado_Mejora2
 		desc:Diputado_Mejora2<//><b>Efecto:</b><.>La producción de los Diputados se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/431498547784056850/1111318708091097158/Builds_Diputados_Icono48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/diputado.png
 		cost:100000 khrones
 		passive:multiply yield of Diputados by 2
 		req:(Diputados>=10)
  
-	*DiputadoUpgrade3
+	*DiputadoMejora3
 		name:Diputado_Mejora3
 		desc:Diputado_Mejora3<//><b>Efecto:</b><.>La producción de los Diputados se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/431498547784056850/1111318708091097158/Builds_Diputados_Icono48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/diputado.png
 		cost:250000 khrones
 		passive:multiply yield of Diputados by 2
 		req:(Diputados>=25)
  
-	*DiputadoUpgrade4
+	*DiputadoMejora4
 		name:Diputado_Mejora4
 		desc:Diputado_Mejora4<//><b>Efecto:</b><.>La producción de los Diputados se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/431498547784056850/1111318708091097158/Builds_Diputados_Icono48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/diputado.png
 		cost:500000 khrones
 		passive:multiply yield of Diputados by 2
 		req:(Diputados>=50)
 
-	*DiputadoUpgrade5
+	*DiputadoMejora5
 		name:Diputado_Mejora5
 		desc:Diputado_Mejora5<//><b>Efecto:</b><.>La producción de los Diputados se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/431498547784056850/1111318708091097158/Builds_Diputados_Icono48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/diputado.png
 		cost:1000000 khrones
 		passive:multiply yield of Diputados by 2
 		req:(Diputados>=100)
@@ -838,49 +839,49 @@ Upgrades
 	*DiputadoMejoraFinal
 		name:Diputado_MejoraFinal
 		desc:Estás haciendo una gestión increíble y se está notando en todo Khron: jugadores felices y motivados. Has formado un gran sentimiento hacia Khron que nunca se había visto jamás.<//><b>Efecto:</b><.>La producción de los Jugadores se multiplica por <b>2</b>. <.>La producción de los Donantes se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/431498547784056850/1111318708091097158/Builds_Diputados_Icono48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/bandera_khron.png
 		cost:2000000 khrones, 100000 EsmeraldasKhron
 		passive:multiply yield of Jugadores by 2
 		passive:multiply yield of Donantes by 2
 		req:(Diputados>=100)
 		req:100000 EsmeraldasKhron:earned
 
-	*DonanteUpgrade1
+	*DonanteMejora1
 		name:Donante_Mejora1
 		desc:Donante_Mejora1<//><b>Efecto:</b><.>La producción de los Donantes se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111617274651090974/corazon_arcoiris.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/corazon_arcoiris_48.png
 		cost:1000 EsmeraldasKhron
 		passive:multiply yield of Donante by 2
 		req:(Donante>=1)
  
-	*DonanteUpgrade2
+	*DonanteMejora2
 		name:Aldeano_Mejora2
 		desc:Aldeano_Mejora2<//><b>Efecto:</b><.>La producción de los Donantes se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111617274651090974/corazon_arcoiris.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/corazon_arcoiris_48.png
 		cost:10000 EsmeraldasKhron
 		passive:multiply yield of Donante by 2
 		req:(Donante>=10)
  
-	*DonanteUpgrade3
+	*DonanteMejora3
 		name:Donante_Mejora3
 		desc:Donante_Mejora3<//><b>Efecto:</b><.>La producción de los Donantes se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111617274651090974/corazon_arcoiris.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/corazon_arcoiris_48.png
 		cost:25000 EsmeraldasKhron
 		passive:multiply yield of Donante by 2
 		req:(Donante>=25)
 
-	*DonanteUpgrade4
+	*DonanteMejora4
 		name:Donante_Mejora4
 		desc:Donante_Mejora4<//><b>Efecto:</b><.>La producción de los Donantes se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111617274651090974/corazon_arcoiris.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/corazon_arcoiris_48.png
 		cost:50000 EsmeraldasKhron
 		passive:multiply yield of Donante by 2
 		req:(Donante>=50)
  
-	*DonanteUpgrade5
-		name:Donante_Mejora5
+	*DonanteMejora5
+		name:MK_MakroM
 		desc:Donante_Mejora5<//><b>Efecto:</b><.>La producción de los Donantes se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111617274651090974/corazon_arcoiris.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/corazon_arcoiris_48.png
 		cost:100000 EsmeraldasKhron
 		passive:multiply yield of Donante by 2
 		req:(Donante>=100)
@@ -888,7 +889,7 @@ Upgrades
 	*DonanteMejoraFinal
 		name:Los verdaderos dioses
 		desc:Los donantes están que tiran la casa por la ventana. Quizás nadie sepa de dónde sacan tanto dinero, pero una cosa es cierta: aumentan drásticamente la moral de los jugadores y del equipo de administración porque saben que, al fin y al cabo, ellos son los que hacen posible que el servidor de Khron siga en pie.<//><b>Efecto:</b><.>La producción de AlexTMjugador se multiplica por <b>5</b>. <.>La producción de los Jugadores se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111617274651090974/corazon_arcoiris.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/corazon_arcoiris_48.png
 		cost:1000000 EsmeraldasKhron
 		passive:multiply yield of Jugadores by 2
 		passive:multiply yield of AlexTMjugador by 5
@@ -898,7 +899,7 @@ Upgrades
 	*CultivoMejora1
 		name:CultivoMejora1
 		desc:CultivoMejora1<//><b>Efecto:</b><.>La producción de los cultivos se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636057705332746/azada_fuego.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/azada_roja.png
 		cost:100000 khrones
 		passive:multiply yield of Cultivos by 2
 		req:(Cultivos>=1)
@@ -906,7 +907,7 @@ Upgrades
 	*CultivoMejora2
 		name:CultivoMejora2
 		desc:CultivoMejora2<//><b>Efecto:</b><.>La producción de los cultivos se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111586013215727687/azada_naranja.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/azada_naranja.png
 		cost:1000000 khrones
 		passive:multiply yield of Cultivos by 2
 		req:(Cultivos>=10)
@@ -914,7 +915,7 @@ Upgrades
 	*CultivoMejora3
 		name:CultivoMejora3
 		desc:CultivoMejora3<//><b>Efecto:</b><.>La producción de los cultivos se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636058175090718/azada_trueno.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/azada_amarilla.png
 		cost:25000000 khrones
 		passive:multiply yield of Cultivos by 2
 		req:(Cultivos>=25)
@@ -922,7 +923,7 @@ Upgrades
 	*CultivoMejora4
 		name:CultivoMejora4
 		desc:CultivoMejora4<//><b>Efecto:</b><.>La producción de los cultivos se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636057973751952/azada_naturaleza.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/azada_verde.png
 		cost:50000000 khrones
 		passive:multiply yield of Cultivos by 2
 		req:(Cultivos>=50)
@@ -930,104 +931,104 @@ Upgrades
 	*CultivoMejora5
 		name:CultivoMejora5
 		desc:CultivoMejora5<//><b>Efecto:</b><.>La producción de los cultivos se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636057449476308/azada_agua.png
-		cost:10000000 khrones
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/azada_azul.png
+		cost:100000000 khrones
 		passive:multiply yield of Cultivos by 2
 		req:(Cultivos>=100)
 
 	*CultivoMejoraFinal
 		name:Árboles de esmeraldas
 		desc:Gracias a los estudios financiados por el Estado de Khron, los aldeanos han conseguido hacer que un árbol común pueda dar esmeraldas puras modificando su ADN.<//><b>Efecto:</b><.>Los cultivos ahora darán <b>1 esmeralda de Khron</b> cada 16 minutos y 40 segundos. <.>Los Aldeanos son un <b>20%</b> más eficientes produciendo esmeraldas.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111714239695044748/trigo.png
-		cost:20000000 khrones, 500000 EsmeraldasKhron
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/esmeralda_khron.png
+		cost:200000000 khrones, 500000 EsmeraldasKhron
 		req:(Cultivos>=100)
 		req:500000 EsmeraldasKhron:earned
 
-	*GranjaUpgrade1
+	*GranjaMejora1
 		name:Granja_Mejora1
 		desc:Granja_Mejora1<//><b>Efecto:</b><.>La producción de las Granjas se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636391467061288/red_dye.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/carne_podrida.png
 		cost:500000 khrones
 		passive:multiply yield of Granjas by 2
 		req:(Granjas>=1)
  
-	*GranjaUpgrade2
+	*GranjaMejora2
 		name:Granja_Mejora2
 		desc:Granja_Mejora2<//><b>Efecto:</b><.>La producción de las Granjas se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636391467061288/red_dye.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/bola_slime.png
 		cost:5000000 khrones
 		passive:multiply yield of Granjas by 2
 		req:(Granjas>=10)
  
-	*GranjaUpgrade3
+	*GranjaMejora3
 		name:Granja_Mejora3
 		desc:Granja_Mejora3<//><b>Efecto:</b><.>La producción de las Granjas se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636391467061288/red_dye.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/lingote_hierro.png
 		cost:12500000 khrones
 		passive:multiply yield of Granjas by 2
 		req:(Granjas>=25)
  
-	*GranjaUpgrade4
+	*GranjaMejora4
 		name:Granja_Mejora4
 		desc:Granja_Mejora4<//><b>Efecto:</b><.>La producción de las Granjas se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636391467061288/red_dye.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/polvo_blaze.png
 		cost:25000000 khrones
 		passive:multiply yield of Granjas by 2
 		req:(Granjas>=50)
 
-	*GranjaUpgrade5
+	*GranjaMejora5
 		name:Granja_Mejora5
 		desc:Granja_Mejora5<//><b>Efecto:</b><.>La producción de las Granjas se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636391467061288/red_dye.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/perla_ender.png
 		cost:50000000 khrones
 		passive:multiply yield of Granjas by 2
 		req:(Granjas>=100)
 
 	*GranjaMejoraFinal
-		name:Granja_MejoraFinal
-		desc:Granja_MejoraFinal<//><b>Efecto:</b><.>La producción de las Granjas se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636391467061288/red_dye.png
+		name:Farmeando todo
+		desc:Tus granjas farmean todo lo habido y por haber en Minecraft. No hay nada que se escape: si existe, es farmeable.<//><b>Efecto:</b><.>La producción de las Granjas se multiplica por <b>4</b>.
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/estrella_nether_animada.gif
 		cost:100000000 khrones, 1000000 EsmeraldasKhron
-		passive:multiply yield of Granjas by 2
+		passive:multiply yield of Granjas by 4
 		req:(Granjas>=100)
 		req:1000000 EsmeraldasKhron:earned
  
-	*MagiaUpgrade1
+	*MagiaMejora1
 		name:Magia_Mejora1
 		desc:Magia_Mejora1<//><b>Efecto:</b><.>La producción de las Mesas de encantamiento se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636476267507712/Potion_of_Swiftness_JE1_BE1.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/lapis_lazuli.png
 		cost:1234560 khrones
 		passive:multiply yield of Magias by 2
 		req:(Magias>=1)
  
-	*MagiaUpgrade2
+	*MagiaMejora2
 		name:Magia_Mejora2
 		desc:Magia_Mejora2<//><b>Efecto:</b><.>La producción de las Mesas de encantamiento se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636476481425481/Potion_of_Healing_JE1_BE1.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/frasco_experiencia.png
 		cost:12345600 khrones
 		passive:multiply yield of Magias by 2
 		req:(Magias>=10)
  
-	*MagiaUpgrade3
+	*MagiaMejora3
 		name:Magia_Mejora3
 		desc:Magia_Mejora3<//><b>Efecto:</b><.>La producción de las Mesas de encantamiento se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636476724686920/Potion_of_Fire_Resistance_JE1_BE1.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/pocion_suerte.png
 		cost:30864000 khrones
 		passive:multiply yield of Magias by 2
 		req:(Magias>=25)
  
-	*MagiaUpgrade4
+	*MagiaMejora4
 		name:Magia_Mejora4
 		desc:Magia_Mejora4<//><b>Efecto:</b><.>La producción de las Mesas de encantamiento se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636477118959676/experience_bottle.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/libro_encantado_animado.gif
 		cost:61728000 khrones
 		passive:multiply yield of Magias by 2
 		req:(Magias>=50)
 
-	*MagiaUpgrade5
+	*MagiaMejora5
 		name:Magia_Mejora5
 		desc:Magia_Mejora5<//><b>Efecto:</b><.>La producción de las Mesas de encantamiento se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636477118959676/experience_bottle.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/lapis_lazuli.png
 		cost:123456000 khrones
 		passive:multiply yield of Magias by 2
 		req:(Magias>=100)
@@ -1035,7 +1036,7 @@ Upgrades
 	*MagiaMejoraFinal
 		name:Magia_MejoraFinal
 		desc:Magia_MejoraFinal<//><b>Efecto:</b><.>Las mesas de encantamiento ahora generan 1 esmeralda cada 1 minuto y 40 segundos. <.>Los pingüinos aparecen con un <b>5%</b> más de frecuencia. <.>Los loros aparecen con un <b>5%</b> más de frecuencia. <.>Los corasonsitos aparecen con un <b>5%</b> más de frecuencia.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636477118959676/experience_bottle.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/lapis_lazuli.png
 		cost:246912000 khrones, 5000000 EsmeraldasKhron
 		passive:multiply frequency of Pinguino by 0.95
 		passive:multiply frequency of Loro by 0.95
@@ -1043,42 +1044,42 @@ Upgrades
 		req:(Magias>=100)
 		req:5000000 EsmeraldasKhron:earned
  
-	*NegocioUpgrade1
+	*NegocioMejora1
 		name:Negocio_Mejora1
 		desc:Negocio_Mejora1<//><b>Efecto:</b><.>La producción de los Negocios se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636576033214505/caramelo_4.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/caramelo_rojo.png
 		cost:3000000 khrones
 		passive:multiply yield of Negocios by 2
 		req:(Negocios>=1)
  
-	*NegocioUpgrade2
+	*NegocioMejora2
 		name:Negocio_Mejora2
 		desc:Negocio_Mejora2<//><b>Efecto:</b><b>Efecto:</b><.>La producción de los Negocios se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636576310046781/caramelo_1.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/caramelo_naranja.png
 		cost:30000000 khrones
 		passive:multiply yield of Negocios by 2
 		req:(Negocios>=10)
  
-	*NegocioUpgrade3
+	*NegocioMejora3
 		name:Negocio_Mejora3
 		desc:Negocio_Mejora3<//><b>Efecto:</b><b>Efecto:</b><.>La producción de los Negocios se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636576561713232/caramelo_5.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/caramelo_amarillo.png
 		cost:75000000 khrones
 		passive:multiply yield of Negocios by 2
 		req:(Negocios>=25)
  
-	*NegocioUpgrade4
+	*NegocioMejora4
 		name:Negocio_Mejora4
 		desc:Negocio_Mejora4<//><b>Efecto:</b><b>Efecto:</b><.>La producción de los Negocios se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636576804974813/caramelo_3.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/caramelo_verde.png
 		cost:150000000 khrones
 		passive:multiply yield of Negocios by 2
 		req:(Negocios>=50)
 
-	*NegocioUpgrade5
+	*NegocioMejora5
 		name:Negocio_Mejora5
 		desc:Negocio_Mejora5<//><b>Efecto:</b><b>Efecto:</b><.>La producción de los Negocios se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636576804974813/caramelo_3.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/caramelo_azul.png
 		cost:300000000 khrones
 		passive:multiply yield of Negocios by 2
 		req:(Negocios>=100)
@@ -1086,48 +1087,48 @@ Upgrades
 	*NegocioMejoraFinal
 		name:Negocio_MejoraFinal
 		desc:Negocio_MejoraFinal<//><b>Efecto:</b><b>Efecto:</b><.>La producción de los Negocios se multiplica por <b>5</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636576804974813/caramelo_3.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/caramelo_magico.png
 		cost:600000000 khrones, 10000000 EsmeraldasKhron
 		passive:multiply yield of Negocios by 5
 		req:(Negocios>=100)
 		req:10000000 EsmeraldasKhron:earned
  
-	*BancoUpgrade1
+	*BancoMejora1
 		name:Banco_Mejora1
 		desc:Banco_Mejora1<//><b>Efecto:</b><.>La producción de los Bancos se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636676730069094/copper_ingot.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billete_diez_khron.png
 		cost:12500000 khrones
 		passive:multiply yield of Bancos by 2
 		req:(Bancos>=1)
  
-	*BancoUpgrade2
+	*BancoMejora2
 		name:Banco_Mejora2
 		desc:Banco_Mejora2<//><b>Efecto:</b><.>La producción de los Bancos se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636677099180072/iron_ingot.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billete_veinte_khron.png
 		cost:12500000 khrones
 		passive:multiply yield of Bancos by 2
 		req:(Bancos>=10)
  
-	*BancoUpgrade3
+	*BancoMejora3
 		name:Banco_Mejora3
 		desc:Banco_Mejora3<//><b>Efecto:</b><.>La producción de los Bancos se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636677300486285/gold_ingot.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billete_cincuenta_khron.png
 		cost:312500000 khrones
 		passive:multiply yield of Bancos by 2
 		req:(Bancos>=25)
  
-	*BancoUpgrade4
+	*BancoMejora4
 		name:Banco_Mejora4
 		desc:Banco_Mejora4<//><b>Efecto:</b><.>La producción de los Bancos se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109612171572285470/1110989177396400178/esmeralda_khron48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billete_cien_khron.png
 		cost:625000000 khrones
 		passive:multiply yield of Bancos by 2
 		req:(Bancos>=50)
 
-	*BancoUpgrade5
+	*BancoMejora5
 		name:Banco_Mejora5
 		desc:Banco_Mejora5<//><b>Efecto:</b><.>La producción de los Bancos se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636677560541194/netherite_ingot.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billete_doscientos_khron.png
 		cost:1250000000 khrones
 		passive:multiply yield of Bancos by 2
 		req:(Bancos>=100)
@@ -1135,16 +1136,16 @@ Upgrades
 	*BancoMejoraFinal
 		name:Banco_MejoraFinal
 		desc:Banco_MejoraFinal<//><b>Efecto:</b><.>La producción de los Bancos se multiplica por <b>2</b>.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636677560541194/netherite_ingot.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billete_quinientos_khron.png
 		cost:1000000000 khrones
 		passive:multiply yield of Bancos by 2
 		req:(Bancos>=100)
 		req:50000000 EsmeraldasKhron:earned
  
-	*AyuntamientoUpgrade1
+	*AyuntamientoMejora1
 		name:Ayuntamiento de Aren
 		desc:Has llegado al poder en la Región de Aren.<//><b>Efecto:</b><.>El ayuntamiento de Aren genera <b>1.000 Ꝃhrones</b> adicionales por segundo. <.>Aumenta la producción de Ꝃhrones en un <b>1%</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111328820226695168/banderaAren.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/bandera_aren.png
 		cost:1000000 khrones
 		cost:1000 EsmeraldasKhron
 		passive:increase yield of Ayuntamientos by 1000
@@ -1165,10 +1166,10 @@ Upgrades
 		req:(Ayuntamientos>=1)
 		req:(Diputados>=10)
  
-	*AyuntamientoUpgrade2
+	*AyuntamientoMejora2
 		name:Ayuntamiento de Hanae
 		desc:Has llegado al poder en la Región de Hanae.<//><b>Efecto:</b><.>El ayuntamiento de Hanae genera <b>2.500 Ꝃhrones</b> adicionales por segundo. <.>Aumenta la producción de Ꝃhrones en un <b>2%</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111328820658704534/banderahanae.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/bandera_hanae.png
 		cost:2200000 khrones
 		cost:2200 EsmeraldasKhron
 		passive:increase yield of Ayuntamientos by 2500
@@ -1189,10 +1190,10 @@ Upgrades
 		req:(Ayuntamientos>=1)
 		req:(Diputados>=22)
  
-	*AyuntamientoUpgrade3
+	*AyuntamientoMejora3
 		name:Ayuntamiento de Verdalia
 		desc:Has llegado al poder en la Región de Verdalia.<//><b>Efecto:</b><.>El ayuntamiento de Verdalia genera <b>5.000</b> Ꝃhrones adicionales por segundo. <.>Aumenta la producción de Ꝃhrones en un <b>3%</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111328821078147122/banderaVerdalia.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/bandera_verdalia.png
 		cost:47000000 khrones
 		cost:4700 EsmeraldasKhron
 		passive:increase yield of Ayuntamientos by 5000
@@ -1213,10 +1214,10 @@ Upgrades
 		req:(Ayuntamientos>=1)
 		req:(Diputados>=47)
  
-	*AyuntamientoUpgrade4
+	*AyuntamientoMejora4
 		name:Ayuntamiento de Terrae
 		desc:Has llegado al poder en la Región de Aren.<//><b>Efecto:</b><.>El ayuntamiento de Terrae generan <b>10.000</b> Ꝃhrones adicionales por segundo. <.>Aumenta la producción de Ꝃhrones en un <b>4%</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111328820872618054/banderaTerrae.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/bandera_terrae.png
 		cost:10100000 khrones
 		cost:10100 EsmeraldasKhron
 		passive:increase yield of Ayuntamientos by 10000
@@ -1237,10 +1238,10 @@ Upgrades
 		req:(Ayuntamientos>=1)
 		req:(Diputados>=101)
 
-	*AyuntamientoUpgrade5
+	*AyuntamientoMejora5
 		name:Ayuntamiento de Aylas
 		desc:Has llegado al poder en la Región de Aylas.<//><b>Efecto:</b><.>El ayuntamiento de Aylas genera <b>25.000</b> Ꝃhrones adicionales por segundo. <.>Aumenta la producción de Ꝃhrones en un <b>5%</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111328820419641415/banderaAylas.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/bandera_aylas.png
 		cost:21700000 khrones
 		cost:21700 EsmeraldasKhron
 		passive:increase yield of Ayuntamientos by 25000
@@ -1264,7 +1265,7 @@ Upgrades
 	*AyuntamientoMejoraF
 		name:Gestión sincronizada
 		desc:Ahora que gobiernas en todas las regiones, es hora de que todas vayan de la mano y progresen al unísono.<//><b>Efecto:</b><.>Los ayuntamientos generan <b>56.500</b> Ꝃhrones adicionales por segundo. <.>Aumenta la producción de Ꝃhrones en un <b>10%</b>.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111328820419641415/banderaAylas.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/bandera_khron.png
 		cost:50000000 khrones
 		cost:50000 EsmeraldasKhron
 		passive:increase yield of Ayuntamientos by 56500
@@ -1283,21 +1284,21 @@ Upgrades
 		passive:multiply yield of RKAyuntamiento by 1.10
 		passive:multiply yield of RKIdos by 1.10
 		req:(Ayuntamientos>=1)
-		req:(AyuntamientoUpgrade5)
+		req:(AyuntamientoMejora5)
  
 	//Mejoras del Pingüino
  
 	*PinguinoMejora1
 		name:Pinguino_Mejora1
 		desc:PinguinoMejora1<//><b>Efecto:</b><.><b>1%</b> de probabilidad de ganar una Esmeralda de Khron al hacer clic en la moneda.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110262329792286810/LibroEncantado48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/libro_encantado_animado.gif
 		cost:3 EsmeraldaKhron
 		req:3 EsmeraldaKhron:earned
  
 	*PinguinoMejora2
 		name:Pinguino_Mejora2
 		desc:PinguinoMejora2<//><b>Efecto:</b><.>Los Pingüinos aparecen un con un 10% más de frecuencia.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111408300815306854/pinguino_adorable_48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/pinguino_adorable_48.png
 		passive:multiply frequency of Pinguino by 0.9
 		cost:33 EsmeraldasKhron
 		req:33 EsmeraldaKhron:earned
@@ -1305,7 +1306,7 @@ Upgrades
 	*PinguinoMejora3
 		name:Pinguino_Mejora3
 		desc:PinguinoMejora3<//><b>Efecto:</b><.>Los efectos de los Pingüinos son el <b>doble</b> de poderosos.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111408300815306854/pinguino_adorable_48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/pinguino_adorable_48.png
 		cost:333 EsmeraldasKhron
 		req:333 EsmeraldasKhron:earned
 
@@ -1314,14 +1315,14 @@ Upgrades
 	*LoroMejora1
 		name:Fortuna II
 		desc:¡Encanta tu ratón para tener más suerte al hacer clic en la moneda de Khron!<//><b>Efecto:</b><.><b>2%</b> de probabilidad de ganar una Esmeralda de Khron al hacer clic en la moneda.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110262329792286810/LibroEncantado48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/libro_encantado_animado.gif
 		cost:7 EsmeraldaKhron
 		req:7 EsmeraldaKhron:earned
  
 	*LoroMejora2
 		name:Semillas de trigo
 		desc:Con semillas de trigo atraerás a mas Loros.<//><b>Efecto:</b><.>Los Loros aparecen un con un <b>25%</b> más de frecuencia. <.>Los efectos de los loros son el <b>triple</b> de poderosos.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110262641584259072/SemillasMagicas48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/loro_adorable_48.png
 		passive:multiply frequency of Loro by 0.75
 		cost:77 EsmeraldasKhron
 		req:77 EsmeraldaKhron:earned
@@ -1329,7 +1330,7 @@ Upgrades
 	*LoroMejora3
 		name:Música mágica
 		desc:¡A los loros les encanta bailar y con la música que has puesto tienen ganas de compartir más!<//><b>Efecto:</b><.>Los efectos de los Loros son el <b>triple</b> de poderosos.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110217531601469522/MejoraLorito48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/loro_adorable_48.png
 		cost:777 EsmeraldasKhron
 		req:777 EsmeraldasKhron:earned
 
@@ -1338,14 +1339,14 @@ Upgrades
 	*CorazonMejora1
 		name:Fortuna III
 		desc:¡Encanta tu ratón para tener más suerte al hacer clic en la moneda de Khron!<//><b>Efecto:</b><.><b>3%</b> de probabilidad de ganar una Esmeralda de Khron al hacer clic en la moneda.
-		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110262329792286810/LibroEncantado48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/libro_encantado_animado.gif
 		cost:10 EsmeraldaKhron
 		req:10 EsmeraldaKhron:earned
  
 	*CorazonMejora2
 		name:Mejora_Corazon2
 		desc:Mejora_Corazon2<//><b>Efecto:</b><.>Los Corazones aparecen un con un <b>50%</b> más de frecuencia.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111617274651090974/corazon_arcoiris.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/corazon_arcoiris_48.png
 		passive:multiply frequency of Donantes by 0.5
 		cost:100 EsmeraldasKhron
 		req:100 EsmeraldaKhron:earned
@@ -1353,146 +1354,213 @@ Upgrades
 	*CorazonMejora3
 		name:Mejora_Corazon3
 		desc:Mejora_Corazon3<//><b>Efecto:</b><.>Los efectos de los Corazones son el <b>cuádruple</b> de poderosos.
-		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111617274651090974/corazon_arcoiris.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/corazon_arcoiris_48.png
 		cost:1000 EsmeraldasKhron
 		req:1000 EsmeraldasKhron:earned
  
 Achievements
 	*TEMPLATE
 		on click:anim glow
+
+	//Logros de Khrones totales
  
-	*khronAchiev1
+	*KhronesTotal1
 		name:Uno más en Khron. ¿Qué le deparará el futuro?
 		desc:Consigue <b>1</b> Ꝃhron.
 		req:1 khron
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637309671506051/bolsa_monedas_bronce48x48.png
-	*khronAchiev2
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/moneda_un_khron.png
+	*KhronesTotal2
 		name:Khrones_2
 		desc:Consigue <b>100</b> Ꝃhrones.
 		req:100 khrones
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637309671506051/bolsa_monedas_bronce48x48.png
-	*khronAchiev3
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/bolsa_monedas_bronce.png
+	*KhronesTotal3
 		name:Khrones_3
 		desc:Consigue <b>1.000</b> Ꝃhrones.
 		req:1000 khrones
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637309671506051/bolsa_monedas_bronce48x48.png
-	*khronAchiev4
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/bolsa_monedas_plata.png
+	*KhronesTotal4
 		name:Khrones_4
 		desc:Consigue <b>10.000</b> Ꝃhrones.
 		req:10000 khrones
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637309935763546/bolsa_monedas_plata48x48.png
-	*khronAchiev5
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/bolsa_monedas_oro.png
+	*KhronesTotal5
 		name:Khrones_5
 		desc:Consigue <b>100.000</b> Ꝃhrones.
 		req:100000 khrones
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637309935763546/bolsa_monedas_plata48x48.png
-	*khronAchiev6
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billete_un_khron.png
+	*KhronesTotal6
 		name:Millonario
 		desc:Consigue <b>1.000.000</b> de Ꝃhrones.
 		req:1000000 khrones
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637309935763546/bolsa_monedas_plata48x48.png
-	*khronAchiev7
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billete_cinco_khron.png
+	*KhronesTotal7
 		name:Khrones_7
 		desc:Consigue <b>10.000.000</b> de Ꝃhrones.
 		req:10000000 khrones
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637310162239608/bolsa_monedas_oro48x48.png
-	*khronAchiev8
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billete_diez_khron.png
+	*KhronesTotal8
 		name:Khrones_8
 		desc:Consigue <b>100.000.000</b> de Ꝃhrones.
 		req:100000000 khrones
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637310162239608/bolsa_monedas_oro48x48.png
-	*khronAchiev9
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billete_veinte_khron.png
+	*KhronesTotal9
 		name:Khrones_9
 		desc:Consigue <b>1.000.000.000</b> de Ꝃhrones.
 		req:1000000000 khrones
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637310162239608/bolsa_monedas_oro48x48.png
-	*khronAchiev10
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billete_cincuenta_khron.png
+	*KhronesTotal10
 		name:Khrones_10
 		desc:Consigue <b>10.000.000.000</b> de Ꝃhrones.
 		req:10000000000 khrones
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637310644584468/diamante_khron48x48.png
-	*khronAchiev11
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billete_cien_khron.png
+	*KhronesTotal11
 		name:Khrones_11
 		desc:Consigue <b>100.000.000.000</b> de Ꝃhrones.
 		req:100000000000 khrones
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637310397136906/billete_quinientos_khrones48x48.png
-	*khronAchiev12
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billete_doscientos_khron.png
+	*KhronesTotal12
 		name:Khrones_12
 		desc:Consigue <b>1.000.000.000.000</b> de Ꝃhrones.
 		req:1000000000000 khrones
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637310644584468/diamante_khron48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billete_quinientos_khron.png
 
-	*khronPsAchiev1
+	//Logros de Khrones por segundo
+
+	*KhronesSegundo1
 		name:¡Viento en popa!
-		desc:Produce <b>10</b> khrones por segundo.
+		desc:Produce <b>10</b> Ꝃhrones por segundo.
 		req:10 khrones per second
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637504614387883/billete_un_khron.png
-	*khronPsAchiev2
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billete_diez_khron.png
+	*KhronesSegundo2
 		name:Amasando una fortuna
-		desc:Produce <b>100</b> khrones por segundo.
+		desc:Produce <b>100</b> Ꝃhrones por segundo.
 		req:100 khrones per second
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637504866041899/billete_diez_khron.png
-	*khronPsAchiev3
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billete_veinte_khron.png
+	*KhronesSegundo3
 		name:Quién pudiera
-		desc:Produce <b>1.000</b> khrones por segundo.
+		desc:Produce <b>1.000</b> Ꝃhrones por segundo.
 		req:1000 khrones per second
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637505163841696/billete_cien_khron.png
-	*khronPsAchiev4
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billete_cincuenta_khron.png
+	*KhronesSegundo4
 		name:Khrones_segundo_4
-		desc:Produce <b>10.000</b> khrones por segundo.
+		desc:Produce <b>10.000</b> Ꝃhrones por segundo.
 		req:10000 khrones per second
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637505163841696/billete_cien_khron.png
-	*khronPsAchiev5
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billete_cien_khron.png
+	*KhronesSegundo5
 		name:Khrones_segundo_5
-		desc:Produce <b>100.000</b> khrones por segundo.
+		desc:Produce <b>100.000</b> Ꝃhrones por segundo.
 		req:100000 khrones per second
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637505163841696/billete_cien_khron.png
-	*khronPsAchiev6
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billete_doscientos_khron.png
+	*KhronesSegundo6
 		name:Khrones_segundo_6
-		desc:Produce <b>1.000.000</b> khrones por segundo.
+		desc:Produce <b>1.000.000</b> Ꝃhrones por segundo.
 		req:1000000 khrones per second
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637505163841696/billete_cien_khron.png
- 
-	*clickAchiev1
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/billete_quinientos_khron.png
+
+	//Logros de hacer clic en la moneda
+
+	*ClicKhron1
 		name:¡A trabajar!
 		desc:Haz clic al Ꝃhron <b>una</b> vez.
 		req:1 KhronButton clicks
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637628350546031/blue_candle.png
-	*clickAchiev2
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/moneda_khron_retro.png
+	*ClicKhron2
 		name:Trabajo duro
 		desc:Haz clic al Ꝃhron <b>100</b> veces.
 		req:100 KhronButton clicks
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637628644130889/white_candle.png
-	*clickAchiev3
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/moneda_khron_retro.png
+	*ClicKhron3
 		name:Vas a romper la moneda...
 		desc:Haz clic al Ꝃhron <b>1.000</b> veces.
 		req:1000 KhronButton clicks
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637628849672335/cyan_candle.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/moneda_khron_retro.png
+	*ClicKhron4
+		name:Clic_Khron4
+		desc:Haz clic al Ꝃhron <b>2.500</b> veces.
+		req:2500 KhronButton clicks
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/moneda_khron_retro.png
+	*ClicKhron5
+		name:Clic_Khron5
+		desc:Haz clic al Ꝃhron <b>5.000</b> veces.
+		req:5000 KhronButton clicks
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/moneda_khron_retro.png
+	*ClicKhron6
+		name:Clic_Khron6
+		desc:Haz clic al Ꝃhron <b>10.000</b> veces.
+		req:10000 KhronButton clicks
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/moneda_khron_retro.png
+
+	//Logros de esmeraldas totales
  
-	*EsmeraldaAchiev1
+	*EsmeraldaTotal1
 		name:Verde que te quiero verde
 		desc:Consigue <b>1</b> Esmeralda de Khron.
 		req:1 EsmeraldaKhron
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637743526117386/insignia_miembro_1.png
-	*EsmeraldaAchiev2
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/insignia_verde_1.png
+	*EsmeraldaTotal2
 		name:Verde tóxico
 		desc:Consigue <b>100</b> Esmeraldas de Khron.
 		req:100 EsmeraldasKhron
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637743769395311/insignia_miembro_2.png
-	*EsmeraldaAchiev3
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/insignia_verde_2.png
+	*EsmeraldaTotal3
 		name:V E R D E
-		desc:Consigue <b>1000</b> Esmeraldas de Khron.
+		desc:Consigue <b>1.000</b> Esmeraldas de Khron.
 		req:1000 EsmeraldasKhron
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637744079769620/insignia_miembro_3.png
- 
-	*EsmeraldaAchiev4
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/insignia_verde_3.png
+	*EsmeraldaTotal4
 		name:Definitivamente VERDE
-		desc:Consigue <b>10000</b> Esmeraldas de Khron.
+		desc:Consigue <b>10.000</b> Esmeraldas de Khron.
 		req:10000 EsmeraldasKhron
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637744327237702/insignia_miembro_4.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/insignia_verde_4.png
+	*EsmeraldaTotal5
+		name:V E R D E
+		desc:Consigue <b>100.000</b> Esmeraldas de Khron.
+		req:100000 EsmeraldasKhron
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/esmeralda_khron.png
+	*EsmeraldaTotal6
+		name:Definitivamente VERDE
+		desc:Consigue <b>1.000.000</b> Esmeraldas de Khron.
+		req:1000000 EsmeraldasKhron
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/bloque_esmeralda.png
+
+	//Logros de esmeraldas por segundo
+
+	*EsmeraldaSegundo1
+		name:EsmeraldaSegundo1
+		desc:Produce <b>1</b> Esmeralda de Khron por segundo.
+		req:1 EsmeraldaKhron per second
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/insignia_verde_1.png
+	*EsmeraldaSegundo2
+		name:EsmeraldaSegundo2
+		desc:Produce <b>5</b> Esmeralda de Khron por segundo.
+		req:1 EsmeraldasKhron per second
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/insignia_verde_2.png
+	*EsmeraldaSegundo3
+		name:EsmeraldaSegundo3
+		desc:Produce <b>10</b> Esmeralda de Khron por segundo.
+		req:10 EsmeraldaKhron per second
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/insignia_verde_3.png
+	*EsmeraldaSegundo4
+		name:EsmeraldaSegundo4
+		desc:Produce <b>25</b> Esmeralda de Khron por segundo.
+		req:25 EsmeraldaKhron per second
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/insignia_verde_4.png
+	*EsmeraldaSegundo5
+		name:EsmeraldaSegundo5
+		desc:Produce <b>50</b> Esmeralda de Khron por segundo.
+		req:50 EsmeraldaKhron per second
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/esmeralda_khron.png
+	*EsmeraldaSegundo6
+		name:EsmeraldaSegundo6
+		desc:Produce <b>100</b> Esmeralda de Khron por segundo.
+		req:100 EsmeraldaKhron per second
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/bloque_esmeralda.png
+
+	//Logros varios
  
 	*finalAchiev
 		name:¡Khrones a montones!
 		desc:Subyuga a Idos y desata el verdadero poder de <b>AlexTMjugador</b>.<//>¡Lo has conseguido!¡Has completado el juego!
-		req:1 Idos, AlexUpgrade5
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637820650991748/corona.png
+		req:1 Idos, AlexMejoraFinal
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/corona.png
