@@ -126,6 +126,78 @@ Resources
 		desc:RecursoKhronCultivo
 		class:noBackground
 		hidden
+
+	*RKGranja
+		name:RecursoKhronGranja
+		desc:RecursoKhronGranja
+		class:noBackground
+		hidden
+
+	*REGranja
+		name:RecursoKhronGranja
+		desc:RecursoKhronGranja
+		class:noBackground
+		hidden
+
+	*RKMagia
+		name:RecursoKhronMagia
+		desc:RecursoKhronMagia
+		class:noBackground
+		hidden
+
+	*REMagia
+		name:RecursoKhronMagia
+		desc:RecursoKhronMagia
+		class:noBackground
+		hidden
+
+	*RKNegocio
+		name:RecursoKhronNegocio
+		desc:RecursoKhronNegocio
+		class:noBackground
+		hidden
+
+	*RENegocio
+		name:RecursoKhronNegocio
+		desc:RecursoKhronNegocio
+		class:noBackground
+		hidden
+
+	*RKBanco
+		name:RecursoKhronBanco
+		desc:RecursoKhronBanco
+		class:noBackground
+		hidden
+
+	*REBanco
+		name:RecursoKhronBanco
+		desc:RecursoKhronBanco
+		class:noBackground
+		hidden
+
+	*RKAyuntamiento
+		name:RecursoKhronAyuntamiento
+		desc:RecursoKhronAyuntamiento
+		class:noBackground
+		hidden
+
+	*REAyuntamiento
+		name:RecursoKhronAyuntamiento
+		desc:RecursoKhronAyuntamiento
+		class:noBackground
+		hidden
+
+	*RKIdos
+		name:RecursoKhronIdos
+		desc:RecursoKhronIdos
+		class:noBackground
+		hidden
+
+	*REIdos
+		name:RecursoKhronIdos
+		desc:RecursoKhronIdos
+		class:noBackground
+		hidden
  
 Shinies
 	*Pinguino
@@ -134,6 +206,7 @@ Shinies
 		frequency:60
 		frequency variation:120
 		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111285186303365130/pinguino_adorable.png
+		duration: 5
  
 		class:bigButton
 		on click:
@@ -145,13 +218,13 @@ Shinies
 				toast El Pingüinito te bendice con<//><b>[$amount] Ꝃhrones</b>.
 				yield $amount khrones
 			else
-				$amount=10*$boost
+				$amount=1
 				toast ¡El Pingüinito ha atraído a <//><b>[$amount] Donante[s?$amount]</b> de Khron!
 				yield 1 Donante
 			end
 		end
 
-	*Lorito
+	*Loro
 		on click:log Woop
 		movement:onRight moveLeft fade bounce:0.05
 		frequency:240
@@ -164,11 +237,11 @@ Shinies
 			if (chance(10%))
 				//Al menos 10, o entre 15 y 30 minutos de producción de Khrones
 				$amount=max(10,random(khrones:ps*60*15,khrones:ps*60*30))*$boost
-				toast El Lorito te bendice con<//><b>[$amount] Ꝃhrones</b>.
+				toast ¡El Loro te bendice con<//><b>[$amount] Ꝃhrones</b>!
 				yield $amount khrones
 			else
 				$amount=5*$boost
-				toast ¡El Lorito te bendice con<//><b>[$amount] Esmeralda[s?$amount]</b> de Khron!
+				toast ¡El Loro te bendice con<//><b>[$amount] Esmeralda[s?$amount]</b> de Khron!
 				yield $amount EsmeraldaKhron
 			end
 		end
@@ -202,7 +275,7 @@ Buildings
  
 	*AlexTMjugador|AlexTMjugador
 		name:AlexTMjugador|AlexTMjugador
-		desc:Un programador procrastinador. ¿Será capaz de hacer el plugin de economía?<//><b>Efecto:</b><.>Produce <b><#FFD401>[RKAlex:ps] Ꝃhrones</#></b> por segundo. <.><#808080>Solo puedes tener un AlexTMjugador.</#>
+		desc:Un programador procrastinador. ¿Será capaz de hacer el plugin de economía?<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKAlex:ps] Ꝃhrones</#></b> por segundo. <.><#808080>Solo puedes tener un AlexTMjugador.</#>
 		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907054811938906/0.AlexTMjugador48x48.png
 		cost:10 khrones
 		on tick:yield 0.01 khron
@@ -212,7 +285,7 @@ Buildings
  
 	*Allay|Allays
 		name:Allay|Allays
-		desc:Un mob servicial que te puede encontrar Ꝃhrones y, de vez en cuando, una esmeralda de Khron.<//><b>Efecto:</b><.>[Allay] Allays produciendo <b><#FFD401>[RKAllay:ps] Ꝃhrones</#></b> por segundo. <.>También producen <b><#5AC552>[REAllay:ps] esmeraldas de Khron</#></b> por segundo.
+		desc:Un mob servicial que te puede encontrar Ꝃhrones y, de vez en cuando, una esmeralda de Khron.<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKAllay:ps] Ꝃhrones</#></b> por segundo. <.>También producen <b><#5AC552>[REAllay:ps] esmeraldas de Khron</#></b> por segundo.
 		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907080795672586/1.Allay48x48.png
 		cost:25 khrones
 		on tick:yield 0.1 khron
@@ -274,60 +347,73 @@ Buildings
 		name:Cultivo|Cultivos
 		desc:Grandes cultivos para plantar y vender comida por Ꝃhrones a todos los habitantes.<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKCultivo:ps] Ꝃhrones</#></b> por segundo. <.>Produciendo un total de <b><#5AC552>[RECultivo:ps] esmeraldas de Khron</#></b> por segundo.
 		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111714239695044748/trigo.png
-		cost:4000 khrones
-		on tick:yield 9 khrones
-		on tick:yield 9 RKCultivo
-		req:4000 khrones:earned
+		cost:10000 khrones
+		on tick:yield 20 khrones
+		on tick:yield 20 RKCultivo
+		on tick:if (have CultivoMejoraFinal) yield 0.002 EsmeraldasKhron
+		on tick:if (have CultivoMejoraFinal) yield 0.002 RECultivo
+		req:10000 khrones:earned
 
 	*Granja|Granjas
 		name:Granja de Mobs|Granjas de Mobs
-		desc:Granjas que aprovechan el spawn de criaturas para obtener materiales que puedes cambiar por Ꝃhrones.<//><b>Efecto:</b><.>Produce <b>16 Ꝃhrones</b> por segundo.
+		desc:Granjas que aprovechan el spawn de criaturas para obtener materiales que puedes cambiar por Ꝃhrones.<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKGranja:ps] Ꝃhrones</#></b> por segundo.
 		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907133723578408/4.GranjaDeMobs48x48.png
-		cost:20000 khrones
-		on tick:yield 20 khrones
-		req:20000 khrones:earned
+		cost:50000 khrones
+		on tick:yield 50 khrones
+		on tick:yield 50 RKGranja
+		req:50000 khrones:earned
  
 	*Magia|Magias
 		name:Encantamiento|Encantamientos
-		desc:¿Para qué encantar arcos cuando puedes encantar tu cartera con Infinidad? ¡Ꝃhrones invocados por arte de magia!<//><b>Efecto:</b><.>Produce <b>32 Ꝃhrones</b> por segundo.
+		desc:¿Para qué encantar arcos cuando puedes encantar tu cartera con Infinidad? ¡Ꝃhrones invocados por arte de magia!<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKMagia:ps] Ꝃhrones</#></b> por segundo. <.>Produciendo un total de <b><#5AC552>[REMagia:ps] esmeraldas de Khron</#></b> por segundo.
 		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907152392425472/5.Mesa_de_Encantamientos48x48.png
-		cost:54321 khrones
-		on tick:yield 44 khrones
-		req:54321 khrones:earned
+		cost:123456 khrones
+		on tick:yield 123 khrones
+		on tick:yield 123 RKMagia
+		on tick:if (have MagiaMejoraFinal) yield 0.01 EsmeraldasKhron
+		on tick:if (have MagiaMejoraFinal) yield 0.01 REMagia
+		req:123456 khrones:earned
  
 	*Negocio|Negocios
 		name:Negocio de Khron|Negocios de Khron
-		desc:Establecimientos de Khron que pueden generar ingresos<//><b>Efecto:</b><.>Produce <b>111 Ꝃhrones</b> por segundo. <.>Produce <b>1 Esmeralda de Khron</b> cada 4 minutos y 20 segundos.
+		desc:Establecimientos de Khron que pueden generar ingresos<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKNegocio:ps] Ꝃhrones</#></b> por segundo. <.>Produciendo un total de <b><#5AC552>[RENegocio:ps] esmeraldas de Khron</#></b> por segundo.
 		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907170339860520/6.NegociosDeKhron48x48.png
-		cost:250000 khrones, 25 EsmeraldaKhron
-		on tick:yield 111 khrones
+		cost:300000 khrones, 20 EsmeraldaKhron
+		on tick:yield 250 khrones
+		on tick:yield 250 RKNegocio
 		on tick:yield 0.004 EsmeraldasKhron
-		req:250000 khrones:earned
+		on tick:yield 0.004 RENegocio
+		req:300000 khrones:earned
  
 	*Banco|Bancos
 		name:Banco de Khron|Bancos de Khron
-		desc:¿Qué mejor forma de obtener Ꝃhrones que generando intereses y cobrando comisiones?<//><b>Efecto:</b><.>Produce <b>1000 Ꝃhrones</b> por segundo. <.>Produce <b>1 Esmeralda de Khron</b> cada 1 minuto y 40 segundos.
+		desc:¿Qué mejor forma de obtener Ꝃhrones que generando intereses y cobrando comisiones?<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKBanco:ps] Ꝃhrones</#></b> por segundo. <.>Produciendo un total de <b><#5AC552>[REBanco:ps] esmeraldas de Khron</#></b> por segundo.
 		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907197233737748/7.BancoDeKhron48x48.png
-		cost:1000000 khrones, 50 EsmeraldasKhron
+		cost:1250000 khrones, 50 EsmeraldasKhron
 		on tick:yield 1000 khrones
+		on tick:yield 1000 RKBanco
 		on tick:yield 0.01 EsmeraldasKhron
-		req:1000000 khrones:earned
+		on tick:yield 0.01 REBanco
+		req:1250000 khrones:earned
  
 	*Ayuntamiento|Ayuntamientos
 		name:Ayuntamientos de Khron|Ayuntamientos de Khron
-		desc:Ahora que gestionas los ayuntamientos de Khron, ¿qué tal si intentas gobernarlos?<//><b>Efecto:</b><.>Produce <b>2023 Ꝃhrones</b> por segundo. <.><#808080>Desbloqueas los distintos ayuntamientos comprando las mejoras que aparecen teniendo ciertos diputados.</#>
+		desc:Ahora que gestionas los ayuntamientos de Khron, ¿qué tal si intentas gobernarlos?<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKAyuntamiento:ps] Ꝃhrones</#></b> por segundo. <.><#808080>Desbloqueas los distintos ayuntamientos comprando las mejoras que aparecen teniendo ciertos diputados.</#>
 		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907226849726514/8.AyuntamientoDeVerdalia48x48.png
 		cost:10000000 khrones, 1000 EsmeraldasKhron
 		on tick:yield 2023 khrones
+		on tick:yield 2023 RKAyuntamiento
 		req:10000000 khrones:earned
 		limit: 1
  
 	*Idos
 		name:Idos
-		desc:La Deidad suprema. Tus logros económicos han llamado su atención y quiere bendecirnos a todos con Ꝃhrones a diestro y siniestro.<//><b>Efecto:</b><.>Produce <b>100000 Ꝃhrones</b> y <b>100 Esmeraldas de Khron</b> por segundo. <.><#808080>¿Qué esperabas? Solo puedes tener un Idos. Es único.</#>
+		desc:La Deidad suprema. Tus logros económicos han llamado su atención y quiere bendecirnos a todos con Ꝃhrones a diestro y siniestro.<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKIdos:ps] Ꝃhrones</#></b> por segundo. <.>Produciendo un total de <b><#5AC552>[REIdos:ps] esmeraldas de Khron</#></b> por segundo. <.><#808080>¿Qué esperabas? Solo puedes tener un Idos. Es único.</#>
 		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907267291205642/10.Idos48x48.png
 		on tick:yield 100000 khrones
-		on tick:yield 100 EsmeraldaKhron
+		on tick:yield 100000 RKIdos
+		on tick:yield 1000 EsmeraldaKhron
+		on tick:yield 1000 REIdos
 		cost:999999999999 khrones, 999999 EsmeraldasKhron
 		req:999999999 khrones:earned
 		limit:1
@@ -463,6 +549,19 @@ Upgrades
 		cost:250000 khrones
 		passive:increase yield of AlexTMjugador by 1
 		passive:multiply yield of khrones by 1.01
+		passive:multiply yield of RKAlex by 1.01
+		passive:multiply yield of RKAllay by 1.01
+		passive:multiply yield of RKAldeano by 1.01
+		passive:multiply yield of RKJugador by 1.01
+		passive:multiply yield of RKDiputado by 1.01
+		passive:multiply yield of RKDonante by 1.01
+		passive:multiply yield of RKCultivo by 1.01
+		passive:multiply yield of RKGranja by 1.01
+		passive:multiply yield of RKMagia by 1.01
+		passive:multiply yield of RKNegocio by 1.01
+		passive:multiply yield of RKBanco by 1.01
+		passive:multiply yield of RKAyuntamiento by 1.01
+		passive:multiply yield of RKIdos by 1.01
 		req:(AlexTMjugador>=1)
 		req:100000 khrones:earned
  
@@ -473,29 +572,77 @@ Upgrades
 		cost:1000000 khrones
 		passive:increase yield of AlexTMjugador by 9
 		passive:multiply yield of khrones by 1.02
+		passive:multiply yield of RKAlex by 1.02
+		passive:multiply yield of RKAllay by 1.02
+		passive:multiply yield of RKAldeano by 1.02
+		passive:multiply yield of RKJugador by 1.02
+		passive:multiply yield of RKDiputado by 1.02
+		passive:multiply yield of RKDonante by 1.02
+		passive:multiply yield of RKCultivo by 1.02
+		passive:multiply yield of RKGranja by 1.02
+		passive:multiply yield of RKMagia by 1.02
+		passive:multiply yield of RKNegocio by 1.02
+		passive:multiply yield of RKBanco by 1.02
+		passive:multiply yield of RKAyuntamiento by 1.02
+		passive:multiply yield of RKIdos by 1.02
 		req:(AlexTMjugador>=1)
 		req:1000000 khrones:earned
  
 	*AlexUpgrade5
 		name:Plugin de experiencia
-		desc:Con un plugin de niveles y experiencia de Khron, los jugadores se sienten más motivados a conectarse, y por lo tanto, a hacer más uso de la economía base.<//><b>Efecto:</b><.>Alex genera <b>100 Ꝃhrones</b> adicionales por segundo. <.>Aumenta la producción de Ꝃhrones en un <b>3%</b>. <.>Aumenta los Ꝃhrones por clic en un <b>1%</b>.
+		desc:Con un plugin de niveles y experiencia de Khron, los jugadores se sienten más motivados a conectarse, y por lo tanto, a hacer más uso de la economía base.<//><b>Efecto:</b><.>Alex genera <b>100 Ꝃhrones</b> adicionales por segundo. <.>Aumenta la producción de Ꝃhrones en un <b>3%</b>. <.>Multiplica los Ꝃhrones por clic en <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907054811938906/0.AlexTMjugador48x48.png
 		cost:10000000 khrones
 		passive:increase yield of AlexTMjugador by 90
 		passive:multiply yield of khrones by 1.03
-		passive:multiply khron yield of KhronButton by 1.01
+		passive:multiply yield of RKAlex by 1.03
+		passive:multiply yield of RKAllay by 1.03
+		passive:multiply yield of RKAldeano by 1.03
+		passive:multiply yield of RKJugador by 1.03
+		passive:multiply yield of RKDiputado by 1.03
+		passive:multiply yield of RKDonante by 1.03
+		passive:multiply yield of RKCultivo by 1.03
+		passive:multiply yield of RKGranja by 1.03
+		passive:multiply yield of RKMagia by 1.03
+		passive:multiply yield of RKNegocio by 1.03
+		passive:multiply yield of RKBanco by 1.03
+		passive:multiply yield of RKAyuntamiento by 1.03
+		passive:multiply yield of RKIdos by 1.03
+		passive:multiply khron yield of KhronButton by 2
 		req:(AlexTMjugador>=1)
 		req:5000000 khrones:earned
 
 	*AlexUpgrade6
 		name:Ekhronomía
-		desc:Por fin Alex ha hecho lo que todos los jugadores de Khron esperaban: el plugin de economía. Con una economía robusta, estable y funcional, ¡todo el mundo puede usarla sin límites!<//><b>Efecto:</b><.>Alex ahora genera <b>1.000 Ꝃhrones</b> adicionales por segundo <.>Aumenta la producción de Ꝃhrones en un <b>25%</b>. <.>Aumenta la producción de esmeraldas de Khron en un <b>5%</b>. <.>Aumenta los Ꝃhrones por clic en un <b>5%</b>.
+		desc:Por fin Alex ha hecho lo que todos los jugadores de Khron esperaban: el plugin de economía. Con una economía robusta, estable y funcional, ¡todo el mundo puede usarla sin límites!<//><b>Efecto:</b><.>Alex ahora genera <b>1.000 Ꝃhrones</b> adicionales por segundo <.>Aumenta la producción de Ꝃhrones en un <b>25%</b>. <.>Aumenta la producción de esmeraldas de Khron en un <b>5%</b>. <.>Multiplica los Ꝃhrones por clic en <b>5</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110635737038200852/billete_un_khron.png
-		cost:25000000 khrones
+		cost:25000000 khrones, 1000 EsmeraldasKhron
 		passive:increase yield of AlexTMjugador by 900
 		passive:multiply yield of khrones by 1.25
+		passive:multiply yield of RKAlex by 1.25
+		passive:multiply yield of RKAllay by 1.25
+		passive:multiply yield of RKAldeano by 1.25
+		passive:multiply yield of RKJugador by 1.25
+		passive:multiply yield of RKDiputado by 1.25
+		passive:multiply yield of RKDonante by 1.25
+		passive:multiply yield of RKCultivo by 1.25
+		passive:multiply yield of RKGranja by 1.25
+		passive:multiply yield of RKMagia by 1.25
+		passive:multiply yield of RKNegocio by 1.25
+		passive:multiply yield of RKBanco by 1.25
+		passive:multiply yield of RKAyuntamiento by 1.25
+		passive:multiply yield of RKIdos by 1.25
 		passive:multiply yield of EsmeraldasKhron by 1.05
-		passive:multiply khron yield of KhronButton by 1.05
+		passive:multiply yield of REAllay by 1.05
+		passive:multiply yield of REAldeano by 1.05
+		passive:multiply yield of REJugador by 1.05
+		passive:multiply yield of REDonante by 1.05
+		passive:multiply yield of RECultivo by 1.05
+		passive:multiply yield of REMagia by 1.05
+		passive:multiply yield of RENegocio by 1.05
+		passive:multiply yield of REBanco by 1.05
+		passive:multiply yield of REIdos by 1.05
+		passive:multiply khron yield of KhronButton by 5
 		req:(AlexTMjugador>=1)
 		req:10000000 khrones:earned
 
@@ -541,10 +688,10 @@ Upgrades
 
 	*AllayMejoraFinal
 		name:Mejores amigos
-		desc:Los Allays y los Loritos tienen una cosa en común: ¡les encanta bailar, se han hecho buenos amigos y ahora se comparten cosas! Además, los Allays también ayudan en los cultivos cosechando y recogiendo.<//><b>Efecto:</b><.>Los Allays son el <b>doble</b> de eficientes produciendo esmeraldas. <.>La producción de los cultivos se multiplica por <b>2</b>.
+		desc:Los Allays y los Loros tienen una cosa en común: ¡les encanta bailar, se han hecho buenos amigos y ahora se comparten cosas! Además, los Allays también ayudan en los cultivos cosechando y recogiendo.<//><b>Efecto:</b><.>Los Allays son el <b>doble</b> de eficientes produciendo esmeraldas. <.>La producción de los cultivos se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110217531601469522/MejoraLorito48x48.png
-		cost:1000 EsmeraldasKhron
-		cost:50000 khrones
+		cost:50000 khrones, 5000 EsmeraldasKhron
+		passive:multiply khron yield of KhronButton by 3
 		req:1000 EsmeraldasKhron:earned
 		req:(Allays>=100)
 		req:(Cultivos>=25)
@@ -593,8 +740,7 @@ Upgrades
 		name:Aldeano_MejoraFinal
 		desc:Los aldeanos ahora trabajan también en los negocios de Khron y ambas partes se benefician: los negocios tienen más recursos y manos de obra, mientras que los aldeanos obtienen más esmeraldas.<//><b>Efecto:</b><.>Los Aldeanos son el <b>doble</b> de eficientes produciendo esmeraldas. <.>La producción de los Negocios se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820348918153248/1109907170339860520/6.NegociosDeKhron48x48.png
-		cost:200000 khrones
-		cost:10000 EsmeraldasKhron
+		cost:200000 khrones, 10000 EsmeraldasKhron
 		passive:multiply yield of Negocio by 2
 		req:(Aldeano>=100)
 		req:10000 EsmeraldasKhron:earned
@@ -643,8 +789,7 @@ Upgrades
 		name:Los Sabios
 		desc:Los jugadores más expertos de todo Khron ahora colaboran y ayudan en otras construcciones, aplicando todo lo que han adquirido en todo este tiempo de juego.<//><b>Efecto:</b><.>La producción de los Granjas se multiplica por <b>1,5</b>. <.>La producción de las Mesas de encantamiento se multiplica por <b>1,5</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636477118959676/experience_bottle.png
-		cost:1000000 khrones
-		cost:50000 EsmeraldasKhron
+		cost:1000000 khrones, 50000 EsmeraldasKhron
 		passive:multiply yield of Granja by 1.5
 		passive:multiply yield of Magia by 1.5
 		req:(Jugadores>=100)
@@ -694,8 +839,7 @@ Upgrades
 		name:Diputado_MejoraFinal
 		desc:Estás haciendo una gestión increíble y se está notando en todo Khron: jugadores felices y motivados. Has formado un gran sentimiento hacia Khron que nunca se había visto jamás.<//><b>Efecto:</b><.>La producción de los Jugadores se multiplica por <b>2</b>. <.>La producción de los Donantes se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/431498547784056850/1111318708091097158/Builds_Diputados_Icono48x48.png
-		cost:2000000 khrones
-		cost:100000 EsmeraldasKhron
+		cost:2000000 khrones, 100000 EsmeraldasKhron
 		passive:multiply yield of Jugadores by 2
 		passive:multiply yield of Donantes by 2
 		req:(Diputados>=100)
@@ -755,7 +899,7 @@ Upgrades
 		name:CultivoMejora1
 		desc:CultivoMejora1<//><b>Efecto:</b><.>La producción de los cultivos se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636057705332746/azada_fuego.png
-		cost:40000 khrones
+		cost:100000 khrones
 		passive:multiply yield of Cultivos by 2
 		req:(Cultivos>=1)
  
@@ -763,7 +907,7 @@ Upgrades
 		name:CultivoMejora2
 		desc:CultivoMejora2<//><b>Efecto:</b><.>La producción de los cultivos se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111586013215727687/azada_naranja.png
-		cost:400000 khrones
+		cost:1000000 khrones
 		passive:multiply yield of Cultivos by 2
 		req:(Cultivos>=10)
  
@@ -771,7 +915,7 @@ Upgrades
 		name:CultivoMejora3
 		desc:CultivoMejora3<//><b>Efecto:</b><.>La producción de los cultivos se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636058175090718/azada_trueno.png
-		cost:1000000 khrones
+		cost:25000000 khrones
 		passive:multiply yield of Cultivos by 2
 		req:(Cultivos>=25)
  
@@ -779,7 +923,7 @@ Upgrades
 		name:CultivoMejora4
 		desc:CultivoMejora4<//><b>Efecto:</b><.>La producción de los cultivos se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636057973751952/azada_naturaleza.png
-		cost:2000000 khrones
+		cost:50000000 khrones
 		passive:multiply yield of Cultivos by 2
 		req:(Cultivos>=50)
 
@@ -787,7 +931,7 @@ Upgrades
 		name:CultivoMejora5
 		desc:CultivoMejora5<//><b>Efecto:</b><.>La producción de los cultivos se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636057449476308/azada_agua.png
-		cost:4000000 khrones
+		cost:10000000 khrones
 		passive:multiply yield of Cultivos by 2
 		req:(Cultivos>=100)
 
@@ -795,16 +939,15 @@ Upgrades
 		name:Árboles de esmeraldas
 		desc:Gracias a los estudios financiados por el Estado de Khron, los aldeanos han conseguido hacer que un árbol común pueda dar esmeraldas puras modificando su ADN.<//><b>Efecto:</b><.>Los cultivos ahora darán <b>1 esmeralda de Khron</b> cada 16 minutos y 40 segundos. <.>Los Aldeanos son un <b>20%</b> más eficientes produciendo esmeraldas.
 		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111714239695044748/trigo.png
-		cost:8000000 khrones
-		cost:100000 EsmeraldasKhron
-		passive:multiply yield of Cultivos by 2
+		cost:20000000 khrones, 500000 EsmeraldasKhron
 		req:(Cultivos>=100)
+		req:500000 EsmeraldasKhron:earned
 
 	*GranjaUpgrade1
 		name:Granja_Mejora1
 		desc:Granja_Mejora1<//><b>Efecto:</b><.>La producción de las Granjas se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636391467061288/red_dye.png
-		cost:200000 khrones
+		cost:500000 khrones
 		passive:multiply yield of Granjas by 2
 		req:(Granjas>=1)
  
@@ -812,7 +955,7 @@ Upgrades
 		name:Granja_Mejora2
 		desc:Granja_Mejora2<//><b>Efecto:</b><.>La producción de las Granjas se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636391467061288/red_dye.png
-		cost:2000000 khrones
+		cost:5000000 khrones
 		passive:multiply yield of Granjas by 2
 		req:(Granjas>=10)
  
@@ -820,7 +963,7 @@ Upgrades
 		name:Granja_Mejora3
 		desc:Granja_Mejora3<//><b>Efecto:</b><.>La producción de las Granjas se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636391467061288/red_dye.png
-		cost:5000000 khrones
+		cost:12500000 khrones
 		passive:multiply yield of Granjas by 2
 		req:(Granjas>=25)
  
@@ -828,7 +971,7 @@ Upgrades
 		name:Granja_Mejora4
 		desc:Granja_Mejora4<//><b>Efecto:</b><.>La producción de las Granjas se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636391467061288/red_dye.png
-		cost:10000000 khrones
+		cost:25000000 khrones
 		passive:multiply yield of Granjas by 2
 		req:(Granjas>=50)
 
@@ -836,7 +979,7 @@ Upgrades
 		name:Granja_Mejora5
 		desc:Granja_Mejora5<//><b>Efecto:</b><.>La producción de las Granjas se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636391467061288/red_dye.png
-		cost:20000000 khrones
+		cost:50000000 khrones
 		passive:multiply yield of Granjas by 2
 		req:(Granjas>=100)
 
@@ -844,16 +987,16 @@ Upgrades
 		name:Granja_MejoraFinal
 		desc:Granja_MejoraFinal<//><b>Efecto:</b><.>La producción de las Granjas se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636391467061288/red_dye.png
-		cost:40000000 khrones
-		cost:250000 EsmeraldasKhron
+		cost:100000000 khrones, 1000000 EsmeraldasKhron
 		passive:multiply yield of Granjas by 2
 		req:(Granjas>=100)
+		req:1000000 EsmeraldasKhron:earned
  
 	*MagiaUpgrade1
 		name:Magia_Mejora1
 		desc:Magia_Mejora1<//><b>Efecto:</b><.>La producción de las Mesas de encantamiento se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636476267507712/Potion_of_Swiftness_JE1_BE1.png
-		cost:12345 khrones
+		cost:1234560 khrones
 		passive:multiply yield of Magias by 2
 		req:(Magias>=1)
  
@@ -861,7 +1004,7 @@ Upgrades
 		name:Magia_Mejora2
 		desc:Magia_Mejora2<//><b>Efecto:</b><.>La producción de las Mesas de encantamiento se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636476481425481/Potion_of_Healing_JE1_BE1.png
-		cost:123456 khrones
+		cost:12345600 khrones
 		passive:multiply yield of Magias by 2
 		req:(Magias>=10)
  
@@ -869,7 +1012,7 @@ Upgrades
 		name:Magia_Mejora3
 		desc:Magia_Mejora3<//><b>Efecto:</b><.>La producción de las Mesas de encantamiento se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636476724686920/Potion_of_Fire_Resistance_JE1_BE1.png
-		cost:1234567 khrones
+		cost:30864000 khrones
 		passive:multiply yield of Magias by 2
 		req:(Magias>=25)
  
@@ -877,7 +1020,7 @@ Upgrades
 		name:Magia_Mejora4
 		desc:Magia_Mejora4<//><b>Efecto:</b><.>La producción de las Mesas de encantamiento se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636477118959676/experience_bottle.png
-		cost:12345678 khrones
+		cost:61728000 khrones
 		passive:multiply yield of Magias by 2
 		req:(Magias>=50)
 
@@ -885,15 +1028,26 @@ Upgrades
 		name:Magia_Mejora5
 		desc:Magia_Mejora5<//><b>Efecto:</b><.>La producción de las Mesas de encantamiento se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636477118959676/experience_bottle.png
-		cost:123456789 khrones
+		cost:123456000 khrones
 		passive:multiply yield of Magias by 2
 		req:(Magias>=100)
+
+	*MagiaMejoraFinal
+		name:Magia_MejoraFinal
+		desc:Magia_MejoraFinal<//><b>Efecto:</b><.>Las mesas de encantamiento ahora generan 1 esmeralda cada 1 minuto y 40 segundos. <.>Los pingüinos aparecen con un <b>5%</b> más de frecuencia. <.>Los loros aparecen con un <b>5%</b> más de frecuencia. <.>Los corasonsitos aparecen con un <b>5%</b> más de frecuencia.
+		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636477118959676/experience_bottle.png
+		cost:246912000 khrones, 5000000 EsmeraldasKhron
+		passive:multiply frequency of Pinguino by 0.95
+		passive:multiply frequency of Loro by 0.95
+		passive:multiply frequency of Corazon by 0.95
+		req:(Magias>=100)
+		req:5000000 EsmeraldasKhron:earned
  
 	*NegocioUpgrade1
 		name:Negocio_Mejora1
 		desc:Negocio_Mejora1<//><b>Efecto:</b><.>La producción de los Negocios se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636576033214505/caramelo_4.png
-		cost:2000000 khrones
+		cost:3000000 khrones
 		passive:multiply yield of Negocios by 2
 		req:(Negocios>=1)
  
@@ -901,7 +1055,7 @@ Upgrades
 		name:Negocio_Mejora2
 		desc:Negocio_Mejora2<//><b>Efecto:</b><b>Efecto:</b><.>La producción de los Negocios se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636576310046781/caramelo_1.png
-		cost:10000000 khrones
+		cost:30000000 khrones
 		passive:multiply yield of Negocios by 2
 		req:(Negocios>=10)
  
@@ -909,7 +1063,7 @@ Upgrades
 		name:Negocio_Mejora3
 		desc:Negocio_Mejora3<//><b>Efecto:</b><b>Efecto:</b><.>La producción de los Negocios se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636576561713232/caramelo_5.png
-		cost:25000000 khrones
+		cost:75000000 khrones
 		passive:multiply yield of Negocios by 2
 		req:(Negocios>=25)
  
@@ -917,7 +1071,7 @@ Upgrades
 		name:Negocio_Mejora4
 		desc:Negocio_Mejora4<//><b>Efecto:</b><b>Efecto:</b><.>La producción de los Negocios se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636576804974813/caramelo_3.png
-		cost:50000000 khrones
+		cost:150000000 khrones
 		passive:multiply yield of Negocios by 2
 		req:(Negocios>=50)
 
@@ -925,15 +1079,24 @@ Upgrades
 		name:Negocio_Mejora5
 		desc:Negocio_Mejora5<//><b>Efecto:</b><b>Efecto:</b><.>La producción de los Negocios se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636576804974813/caramelo_3.png
-		cost:100000000 khrones
+		cost:300000000 khrones
 		passive:multiply yield of Negocios by 2
 		req:(Negocios>=100)
+
+	*NegocioMejoraFinal
+		name:Negocio_MejoraFinal
+		desc:Negocio_MejoraFinal<//><b>Efecto:</b><b>Efecto:</b><.>La producción de los Negocios se multiplica por <b>5</b>.
+		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636576804974813/caramelo_3.png
+		cost:600000000 khrones, 10000000 EsmeraldasKhron
+		passive:multiply yield of Negocios by 5
+		req:(Negocios>=100)
+		req:10000000 EsmeraldasKhron:earned
  
 	*BancoUpgrade1
 		name:Banco_Mejora1
 		desc:Banco_Mejora1<//><b>Efecto:</b><.>La producción de los Bancos se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636676730069094/copper_ingot.png
-		cost:10000000 khrones
+		cost:12500000 khrones
 		passive:multiply yield of Bancos by 2
 		req:(Bancos>=1)
  
@@ -941,7 +1104,7 @@ Upgrades
 		name:Banco_Mejora2
 		desc:Banco_Mejora2<//><b>Efecto:</b><.>La producción de los Bancos se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636677099180072/iron_ingot.png
-		cost:100000000 khrones
+		cost:12500000 khrones
 		passive:multiply yield of Bancos by 2
 		req:(Bancos>=10)
  
@@ -949,7 +1112,7 @@ Upgrades
 		name:Banco_Mejora3
 		desc:Banco_Mejora3<//><b>Efecto:</b><.>La producción de los Bancos se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636677300486285/gold_ingot.png
-		cost:250000000 khrones
+		cost:312500000 khrones
 		passive:multiply yield of Bancos by 2
 		req:(Bancos>=25)
  
@@ -957,7 +1120,7 @@ Upgrades
 		name:Banco_Mejora4
 		desc:Banco_Mejora4<//><b>Efecto:</b><.>La producción de los Bancos se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109612171572285470/1110989177396400178/esmeralda_khron48x48.png
-		cost:500000000 khrones
+		cost:625000000 khrones
 		passive:multiply yield of Bancos by 2
 		req:(Bancos>=50)
 
@@ -965,9 +1128,18 @@ Upgrades
 		name:Banco_Mejora5
 		desc:Banco_Mejora5<//><b>Efecto:</b><.>La producción de los Bancos se multiplica por <b>2</b>.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636677560541194/netherite_ingot.png
+		cost:1250000000 khrones
+		passive:multiply yield of Bancos by 2
+		req:(Bancos>=100)
+
+	*BancoMejoraFinal
+		name:Banco_MejoraFinal
+		desc:Banco_MejoraFinal<//><b>Efecto:</b><.>La producción de los Bancos se multiplica por <b>2</b>.
+		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110636677560541194/netherite_ingot.png
 		cost:1000000000 khrones
 		passive:multiply yield of Bancos by 2
 		req:(Bancos>=100)
+		req:50000000 EsmeraldasKhron:earned
  
 	*AyuntamientoUpgrade1
 		name:Ayuntamiento de Aren
@@ -977,6 +1149,19 @@ Upgrades
 		cost:1000 EsmeraldasKhron
 		passive:increase yield of Ayuntamientos by 1000
 		passive:multiply yield of khrones by 1.01
+		passive:multiply yield of RKAlex by 1.01
+		passive:multiply yield of RKAllay by 1.01
+		passive:multiply yield of RKAldeano by 1.01
+		passive:multiply yield of RKJugador by 1.01
+		passive:multiply yield of RKDiputado by 1.01
+		passive:multiply yield of RKDonante by 1.01
+		passive:multiply yield of RKCultivo by 1.01
+		passive:multiply yield of RKGranja by 1.01
+		passive:multiply yield of RKMagia by 1.01
+		passive:multiply yield of RKNegocio by 1.01
+		passive:multiply yield of RKBanco by 1.01
+		passive:multiply yield of RKAyuntamiento by 1.01
+		passive:multiply yield of RKIdos by 1.01
 		req:(Ayuntamientos>=1)
 		req:(Diputados>=10)
  
@@ -988,6 +1173,19 @@ Upgrades
 		cost:2200 EsmeraldasKhron
 		passive:increase yield of Ayuntamientos by 2500
 		passive:multiply yield of khrones by 1.02
+		passive:multiply yield of RKAlex by 1.02
+		passive:multiply yield of RKAllay by 1.02
+		passive:multiply yield of RKAldeano by 1.02
+		passive:multiply yield of RKJugador by 1.02
+		passive:multiply yield of RKDiputado by 1.02
+		passive:multiply yield of RKDonante by 1.02
+		passive:multiply yield of RKCultivo by 1.02
+		passive:multiply yield of RKGranja by 1.02
+		passive:multiply yield of RKMagia by 1.02
+		passive:multiply yield of RKNegocio by 1.02
+		passive:multiply yield of RKBanco by 1.02
+		passive:multiply yield of RKAyuntamiento by 1.02
+		passive:multiply yield of RKIdos by 1.02
 		req:(Ayuntamientos>=1)
 		req:(Diputados>=22)
  
@@ -999,6 +1197,19 @@ Upgrades
 		cost:4700 EsmeraldasKhron
 		passive:increase yield of Ayuntamientos by 5000
 		passive:multiply yield of khrones by 1.03
+		passive:multiply yield of RKAlex by 1.03
+		passive:multiply yield of RKAllay by 1.03
+		passive:multiply yield of RKAldeano by 1.03
+		passive:multiply yield of RKJugador by 1.03
+		passive:multiply yield of RKDiputado by 1.03
+		passive:multiply yield of RKDonante by 1.03
+		passive:multiply yield of RKCultivo by 1.03
+		passive:multiply yield of RKGranja by 1.03
+		passive:multiply yield of RKMagia by 1.03
+		passive:multiply yield of RKNegocio by 1.03
+		passive:multiply yield of RKBanco by 1.03
+		passive:multiply yield of RKAyuntamiento by 1.03
+		passive:multiply yield of RKIdos by 1.03
 		req:(Ayuntamientos>=1)
 		req:(Diputados>=47)
  
@@ -1010,6 +1221,19 @@ Upgrades
 		cost:10100 EsmeraldasKhron
 		passive:increase yield of Ayuntamientos by 10000
 		passive:multiply yield of khrones by 1.04
+		passive:multiply yield of RKAlex by 1.04
+		passive:multiply yield of RKAllay by 1.04
+		passive:multiply yield of RKAldeano by 1.04
+		passive:multiply yield of RKJugador by 1.04
+		passive:multiply yield of RKDiputado by 1.04
+		passive:multiply yield of RKDonante by 1.04
+		passive:multiply yield of RKCultivo by 1.04
+		passive:multiply yield of RKGranja by 1.04
+		passive:multiply yield of RKMagia by 1.04
+		passive:multiply yield of RKNegocio by 1.04
+		passive:multiply yield of RKBanco by 1.04
+		passive:multiply yield of RKAyuntamiento by 1.04
+		passive:multiply yield of RKIdos by 1.04
 		req:(Ayuntamientos>=1)
 		req:(Diputados>=101)
 
@@ -1021,8 +1245,45 @@ Upgrades
 		cost:21700 EsmeraldasKhron
 		passive:increase yield of Ayuntamientos by 25000
 		passive:multiply yield of khrones by 1.05
+		passive:multiply yield of RKAlex by 1.05
+		passive:multiply yield of RKAllay by 1.05
+		passive:multiply yield of RKAldeano by 1.05
+		passive:multiply yield of RKJugador by 1.05
+		passive:multiply yield of RKDiputado by 1.05
+		passive:multiply yield of RKDonante by 1.05
+		passive:multiply yield of RKCultivo by 1.05
+		passive:multiply yield of RKGranja by 1.05
+		passive:multiply yield of RKMagia by 1.05
+		passive:multiply yield of RKNegocio by 1.05
+		passive:multiply yield of RKBanco by 1.05
+		passive:multiply yield of RKAyuntamiento by 1.05
+		passive:multiply yield of RKIdos by 1.05
 		req:(Ayuntamientos>=1)
 		req:(Diputados>=217)
+
+	*AyuntamientoMejoraF
+		name:Gestión sincronizada
+		desc:Ahora que gobiernas en todas las regiones, es hora de que todas vayan de la mano y progresen al unísono.<//><b>Efecto:</b><.>Los ayuntamientos generan <b>56.500</b> Ꝃhrones adicionales por segundo. <.>Aumenta la producción de Ꝃhrones en un <b>10%</b>.
+		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111328820419641415/banderaAylas.png
+		cost:50000000 khrones
+		cost:50000 EsmeraldasKhron
+		passive:increase yield of Ayuntamientos by 56500
+		passive:multiply yield of khrones by 1.10
+		passive:multiply yield of RKAlex by 1.10
+		passive:multiply yield of RKAllay by 1.10
+		passive:multiply yield of RKAldeano by 1.10
+		passive:multiply yield of RKJugador by 1.10
+		passive:multiply yield of RKDiputado by 1.10
+		passive:multiply yield of RKDonante by 1.10
+		passive:multiply yield of RKCultivo by 1.10
+		passive:multiply yield of RKGranja by 1.10
+		passive:multiply yield of RKMagia by 1.10
+		passive:multiply yield of RKNegocio by 1.10
+		passive:multiply yield of RKBanco by 1.10
+		passive:multiply yield of RKAyuntamiento by 1.10
+		passive:multiply yield of RKIdos by 1.10
+		req:(Ayuntamientos>=1)
+		req:(AyuntamientoUpgrade5)
  
 	//Mejoras del Pingüino
  
@@ -1048,7 +1309,7 @@ Upgrades
 		cost:333 EsmeraldasKhron
 		req:333 EsmeraldasKhron:earned
 
-	//Mejoras del Lorito
+	//Mejoras del Loro
  
 	*LoroMejora1
 		name:Fortuna II
@@ -1059,15 +1320,15 @@ Upgrades
  
 	*LoroMejora2
 		name:Semillas de trigo
-		desc:Con semillas de trigo atraerás a mas Loritos.<//><b>Efecto:</b><.>Los Loritos aparecen un con un <b>25%</b> más de frecuencia. <.>Los efectos de los Loritos son el <b>triple</b> de poderosos.
+		desc:Con semillas de trigo atraerás a mas Loros.<//><b>Efecto:</b><.>Los Loros aparecen un con un <b>25%</b> más de frecuencia. <.>Los efectos de los loros son el <b>triple</b> de poderosos.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110262641584259072/SemillasMagicas48x48.png
-		passive:multiply frequency of Lorito by 0.75
+		passive:multiply frequency of Loro by 0.75
 		cost:77 EsmeraldasKhron
 		req:77 EsmeraldaKhron:earned
  
 	*LoroMejora3
 		name:Música mágica
-		desc:¡A los loritos les encanta bailar y con la música que has puesto tienen ganas de compartir más!<//><b>Efecto:</b><.>Los efectos de los Loritos son el <b>triple</b> de poderosos.
+		desc:¡A los loros les encanta bailar y con la música que has puesto tienen ganas de compartir más!<//><b>Efecto:</b><.>Los efectos de los Loros son el <b>triple</b> de poderosos.
 		icon:https://cdn.discordapp.com/attachments/1109820727219191958/1110217531601469522/MejoraLorito48x48.png
 		cost:777 EsmeraldasKhron
 		req:777 EsmeraldasKhron:earned
@@ -1083,7 +1344,7 @@ Upgrades
  
 	*CorazonMejora2
 		name:Mejora_Corazon2
-		desc:Mejora_Corazon2<//><b>Efecto:</b><.>Los Corasonsitos aparecen un con un <b>50%</b> más de frecuencia.
+		desc:Mejora_Corazon2<//><b>Efecto:</b><.>Los Corazones aparecen un con un <b>50%</b> más de frecuencia.
 		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111617274651090974/corazon_arcoiris.png
 		passive:multiply frequency of Donantes by 0.5
 		cost:100 EsmeraldasKhron
@@ -1091,7 +1352,7 @@ Upgrades
  
 	*CorazonMejora3
 		name:Mejora_Corazon3
-		desc:Mejora_Corazon3<//><b>Efecto:</b><.>Los efectos de los Corasonsitos son el <b>cuádruple</b> de poderosos.
+		desc:Mejora_Corazon3<//><b>Efecto:</b><.>Los efectos de los Corazones son el <b>cuádruple</b> de poderosos.
 		icon:https://cdn.discordapp.com/attachments/431492337290575882/1111617274651090974/corazon_arcoiris.png
 		cost:1000 EsmeraldasKhron
 		req:1000 EsmeraldasKhron:earned
@@ -1160,23 +1421,7 @@ Achievements
 		desc:Consigue <b>1.000.000.000.000</b> de Ꝃhrones.
 		req:1000000000000 khrones
 		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637310644584468/diamante_khron48x48.png
- 
-	*clickAchiev1
-		name:¡A trabajar!
-		desc:Clickea el khron <b>una</b> vez.
-		req:1 KhronButton clicks
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637628350546031/blue_candle.png
-	*clickAchiev2
-		name:Trabajo duro
-		desc:Clickea el khron <b>100</b> veces.
-		req:100 KhronButton clicks
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637628644130889/white_candle.png
-	*clickAchiev3
-		name:Vas a romper la moneda...
-		desc:Clickea el khron <b>2000</b> veces.
-		req:2000 KhronButton clicks
-		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637628849672335/cyan_candle.png
- 
+
 	*khronPsAchiev1
 		name:¡Viento en popa!
 		desc:Produce <b>10</b> khrones por segundo.
@@ -1184,14 +1429,45 @@ Achievements
 		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637504614387883/billete_un_khron.png
 	*khronPsAchiev2
 		name:Amasando una fortuna
-		desc:Produce <b>1000</b> khrones por segundo.
-		req:1000 khrones per second
+		desc:Produce <b>100</b> khrones por segundo.
+		req:100 khrones per second
 		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637504866041899/billete_diez_khron.png
 	*khronPsAchiev3
 		name:Quién pudiera
-		desc:Produce <b>100000</b> khrones por segundo.
+		desc:Produce <b>1.000</b> khrones por segundo.
+		req:1000 khrones per second
+		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637505163841696/billete_cien_khron.png
+	*khronPsAchiev4
+		name:Khrones_segundo_4
+		desc:Produce <b>10.000</b> khrones por segundo.
+		req:10000 khrones per second
+		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637505163841696/billete_cien_khron.png
+	*khronPsAchiev5
+		name:Khrones_segundo_5
+		desc:Produce <b>100.000</b> khrones por segundo.
 		req:100000 khrones per second
 		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637505163841696/billete_cien_khron.png
+	*khronPsAchiev6
+		name:Khrones_segundo_6
+		desc:Produce <b>1.000.000</b> khrones por segundo.
+		req:1000000 khrones per second
+		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637505163841696/billete_cien_khron.png
+ 
+	*clickAchiev1
+		name:¡A trabajar!
+		desc:Haz clic al Ꝃhron <b>una</b> vez.
+		req:1 KhronButton clicks
+		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637628350546031/blue_candle.png
+	*clickAchiev2
+		name:Trabajo duro
+		desc:Haz clic al Ꝃhron <b>100</b> veces.
+		req:100 KhronButton clicks
+		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637628644130889/white_candle.png
+	*clickAchiev3
+		name:Vas a romper la moneda...
+		desc:Haz clic al Ꝃhron <b>1.000</b> veces.
+		req:1000 KhronButton clicks
+		icon:https://cdn.discordapp.com/attachments/1109821207018209300/1110637628849672335/cyan_candle.png
  
 	*EsmeraldaAchiev1
 		name:Verde que te quiero verde
