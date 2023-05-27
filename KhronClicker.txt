@@ -213,8 +213,8 @@ Shinies
 			$boost=1
 			if (have PinguinoMejora3) $boost=2
 			if (chance(90%))
-				//Al menos 5, o entre 1 y 3 minutos de producción de Khrones
-				$amount=max(5,random(khrones:ps*60*1,khrones:ps*60*3))*$boost
+				//Al menos 1, o entre 1 y 3 minutos de producción de Khrones
+				$amount=max(1,random(khrones:ps*60*1,khrones:ps*60*3))*$boost
 				toast ¡El <b><#0094FF>pingüino</#></b> te bendice con<//><b>[$amount] Ꝃhrones</b>!
 				yield $amount khrones
 			else
@@ -255,10 +255,10 @@ Shinies
 		class:bigButton
 		on click:
 			$boost=1
-			if (have PinguinoMejora3) $boost=4
-			if (chance(25%))
-				//Al menos 15, o entre 30 y 60 minutos de producción de Khrones
-				$amount=max(15,random(khrones:ps*60*30,khrones:ps*60*60))*$boost
+			if (have CorazonMejora3) $boost=4
+			if (chance(20%))
+				//Al menos 5, o entre 5 y 10 minutos de producción de Khrones
+				$amount=max(5,random(khrones:ps*60*5,khrones:ps*60*10))*$boost
 				toast ¡El corazón te bendice con <//><b>[$amount] Ꝃhrones</b>!
 				yield $amount khrones
 			else
@@ -284,7 +284,7 @@ Buildings
  
 	*Allay|Allays
 		name:Allay|Allays
-		desc:Un mob servicial que te puede encontrar Ꝃhrones y, de vez en cuando, una esmeralda de Khron.<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKAllay:ps] Ꝃhrones</#></b> por segundo. <.>También producen <b><#5AC552>[REAllay:ps] esmeraldas de Khron</#></b> por segundo.
+		desc:Un mob servicial que te puede encontrar Ꝃhrones y, de vez en cuando, una esmeralda de Khron.<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKAllay:ps] Ꝃhrones</#></b> por segundo. <.>Produciendo un total de <b><#5AC552>[REAllay:ps] esmeraldas de Khron</#></b> por segundo.
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/allay.png
 		cost:25 khrones
 		on tick:yield 0.1 khron
@@ -528,7 +528,7 @@ Upgrades
 		cost:100 khrones
 		passive:increase yield of AlexTMjugador by 0.01
 		req:(AlexTMjugador>=1)
-		req:50 khrones:earned
+		req:100 khrones:earned
 
 	*AlexMejora2
 		name:Como los chorros del oro
@@ -537,7 +537,7 @@ Upgrades
 		cost:10000 khrones
 		passive:increase yield of AlexTMjugador by 0.02
 		req:(AlexTMjugador>=1)
-		req:1000 khrones:earned
+		req:10000 khrones:earned
  
 	*AlexMejora3
 		name:Servidor 24/7
@@ -560,7 +560,7 @@ Upgrades
 		passive:multiply yield of RKAyuntamiento by 1.01
 		passive:multiply yield of RKIdos by 1.01
 		req:(AlexTMjugador>=1)
-		req:100000 khrones:earned
+		req:250000 khrones:earned
  
 	*AlexMejora4
 		name:TiempoReal
