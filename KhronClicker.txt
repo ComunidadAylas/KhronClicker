@@ -213,8 +213,8 @@ Shinies
 			$boost=1
 			if (have PinguinoMejora3) $boost=2
 			if (chance(90%))
-				//Al menos 1, o entre 1 y 3 minutos de producción de Khrones
-				$amount=max(1,random(khrones:ps*60*1,khrones:ps*60*3))*$boost
+				//Al menos 1, o entre 1 y 2 minutos de producción de Khrones
+				$amount=max(1,random(khrones:ps*60*1,khrones:ps*60*2))*$boost
 				toast ¡El <b><#0094FF>pingüino</#></b> te bendice con<//><b>[$amount] Ꝃhrones</b>!
 				yield $amount khrones
 			else
@@ -251,7 +251,7 @@ Shinies
 		frequency:420
 		frequency variation:180
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/corazon_arcoiris_256.png
-		duration: 30
+		duration: 15
 		class:bigButton
 		on click:
 			$boost=1
@@ -336,8 +336,8 @@ Buildings
 		desc:Estas buenas personas colaboran y ayudan económicamente al servidor de Khron, por lo que sus divisas reales se transforman en Ꝃhrones.<//><b>Efecto:</b><.>Produciendo un total de <b><#FFD401>[RKDonante:ps] Ꝃhrones</#></b> por segundo. <.>Produciendo un total de <b><#5AC552>[REDonante:ps] esmeraldas de Khron</#></b> por segundo.
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/corazon_arcoiris_48.png
 		no buy
-		on tick:yield 20 khrones
-		on tick:yield 20 RKDonante
+		on tick:yield 5 khrones
+		on tick:yield 5 RKDonante
 		on tick:yield 0.004 EsmeraldasKhron
 		on tick:yield 0.004 REDonante
 		req:(Donante>=1)
@@ -846,18 +846,18 @@ Upgrades
 
 	*DonanteMejora1
 		name:Donante_Mejora1
-		desc:Donante_Mejora1<//><b>Efecto:</b><.>La producción de los Donantes se multiplica por <b>2</b>.
+		desc:Donante_Mejora1<//><b>Efecto:</b><.>Los donantes producen <b>5 Ꝃhron</b> adicionales por segundo.
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/corazon_arcoiris_48.png
 		cost:1000 EsmeraldasKhron
-		passive:multiply yield of Donante by 2
+		passive:increase yield of Donante by 5
 		req:(Donante>=1)
  
 	*DonanteMejora2
 		name:Aldeano_Mejora2
-		desc:Aldeano_Mejora2<//><b>Efecto:</b><.>La producción de los Donantes se multiplica por <b>2</b>.
+		desc:Aldeano_Mejora2<//><b>Efecto:</b><.>Los donantes producen <b>10 Ꝃhrones</b> adicionales por segundo.
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/corazon_arcoiris_48.png
 		cost:10000 EsmeraldasKhron
-		passive:multiply yield of Donante by 2
+		passive:increase yield of Donante by 10
 		req:(Donante>=10)
  
 	*DonanteMejora3
@@ -870,18 +870,18 @@ Upgrades
 
 	*DonanteMejora4
 		name:Donante_Mejora4
-		desc:Donante_Mejora4<//><b>Efecto:</b><.>La producción de los Donantes se multiplica por <b>2</b>.
+		desc:Donante_Mejora4<//><b>Efecto:</b><.>La producción de los Donantes se multiplica por <b>3</b>.
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/corazon_arcoiris_48.png
 		cost:50000 EsmeraldasKhron
-		passive:multiply yield of Donante by 2
+		passive:multiply yield of Donante by 3
 		req:(Donante>=50)
  
 	*DonanteMejora5
 		name:MK_MakroM
-		desc:Donante_Mejora5<//><b>Efecto:</b><.>La producción de los Donantes se multiplica por <b>2</b>.
+		desc:Donante_Mejora5<//><b>Efecto:</b><.>La producción de los Donantes se multiplica por <b>4</b>.
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/corazon_arcoiris_48.png
 		cost:100000 EsmeraldasKhron
-		passive:multiply yield of Donante by 2
+		passive:multiply yield of Donante by 4
 		req:(Donante>=100)
 
 	*DonanteMejoraFinal
