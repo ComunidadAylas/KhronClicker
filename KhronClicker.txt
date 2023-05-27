@@ -7,7 +7,7 @@ Let's make a game!
 	version:1
  
 Settings
-	background:https://cdn.discordapp.com/attachments/488124964352950273/1110666792243830896/2023-05-13_12.46.19.png
+	background:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/fondo.png
 	building cost increase:115%
 	building cost refund:50%
 	spritesheet:icons, 32 by 32, https://opengameart.org/sites/default/files/ProjectUtumno_supplemental_0.png
@@ -25,7 +25,7 @@ Buttons
 		on click:if (have PinguinoMejora1 and chance(1%)) yield 1 EsmeraldaKhron
 		on click:if (have LoroMejora1 and chance(2%)) yield 1 EsmeraldaKhron
 		on click:if (have CorazonMejora1 and chance(3%)) yield 1 EsmeraldaKhron
-		icon:https://cdn.discordapp.com/attachments/488124964352950273/1110674060494516315/MonedaKhron256x256.png.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/moneda_khron_256.png
 		no text
 		class:bigButton hasFlares
 		icon class:shadowed
@@ -37,14 +37,14 @@ Resources
 	*khron|khrones
 		name:Ꝃhron|Ꝃhrones
 		desc:Estos son los Ꝃhrones que tienes, ¡los necesitarás para comprar más cosas y así ganar más Ꝃhrones!
-		icon:https://cdn.discordapp.com/attachments/1109612171572285470/1109908313048633375/MonedaKhron48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/moneda_khron_48.png
 		class:noBackground
 		show earned
  
 	*EsmeraldaKhron|EsmeraldasKhron
 		name:Esmeralda de Khron|Esmeraldas de Khron
 		desc:¡Las preciadísimas Esmeraldas de Khron! Guárdalas a buen recaudo, igual te sirven para algo...
-		icon:https://cdn.discordapp.com/attachments/1109612171572285470/1110989177396400178/esmeralda_khron48x48.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/esmeralda_khron.png
 		class:noBackground
 		hidden when 0
 		show earned
