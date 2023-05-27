@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://media.discordapp.net/attachments/488124964352950273/1111357349945421884/image.png" alt="Logotipo de Khron Clicker" width="33%">
+<img src="https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Logo/Khron%20Clicker%20logo.png" alt="Logotipo de Khron Clicker" width="33%">
 <h1>👆 Khron Clicker</h1>
 
 <i>Ficheros fuente del idle game Khron Clicker.</i>
