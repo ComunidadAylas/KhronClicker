@@ -301,7 +301,7 @@ Buildings
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/aldeano.png
 		cost:100 khrones
 		on tick:yield 1 khrones
-		on tick:yield 0.1 RKAldeano
+		on tick:yield 1 RKAldeano
 		on tick:yield 0.002 EsmeraldasKhron
 		on tick:yield 0.002 REAldeano
 		on tick:if (have AldeanoMejoraFinal) yield 0.002 EsmeraldasKhron
