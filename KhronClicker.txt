@@ -721,7 +721,7 @@ Upgrades
 	*AldeanoMejora1
 		name:Aldeanos novatos
 		desc:¡Sube de nivel a los aldeanos para que ofrezcan más intercambios!<//><b>Efecto:</b><.>La producción de los Aldeanos se multiplica por <b>2</b>.
-		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/lingote_cobre.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/aldeano_novato.png
 		cost:1000 khrones
 		passive:multiply yield of Aldeano by 2
 		req:(Aldeano>=1)
@@ -729,7 +729,7 @@ Upgrades
 	*AldeanoMejora2
 		name:Aldeanos aprendices
 		desc:¡Sube de nivel a los aldeanos para que ofrezcan más intercambios!<//><b>Efecto:</b><.>La producción de los Aldeanos se multiplica por <b>2</b>.
-		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/lingote_hierro.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/aldeano_aprendiz.png
 		cost:10000 khrones
 		passive:multiply yield of Aldeano by 2
 		req:(Aldeano>=10)
@@ -737,7 +737,7 @@ Upgrades
 	*AldeanoMejora3
 		name:Aldeanos oficiales
 		desc:¡Sube de nivel a los aldeanos para que ofrezcan más intercambios!<//><b>Efecto:</b><.>La producción de los Aldeanos se multiplica por <b>2</b>.
-		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/lingote_oro.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/aldeano_oficial.png
 		cost:25000 khrones
 		passive:multiply yield of Aldeano by 2
 		req:(Aldeano>=25)
@@ -745,7 +745,7 @@ Upgrades
 	*AldeanoMejora4
 		name:Aldeanos expertos
 		desc:¡Sube de nivel a los aldeanos para que ofrezcan más intercambios!<//><b>Efecto:</b><.>La producción de los Aldeanos se multiplica por <b>2</b>.
-		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/esmeralda_khron.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/aldeano_experto.png
 		cost:50000 khrones
 		passive:multiply yield of Aldeano by 2
 		req:(Aldeano>=50)
@@ -753,7 +753,7 @@ Upgrades
 	*AldeanoMejora5
 		name:Aldeanos maestros
 		desc:¡Sube de nivel a los aldeanos para que ofrezcan más intercambios!<//><b>Efecto:</b><.>La producción de los Aldeanos se multiplica por <b>2</b>.
-		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/diamante_khron.png
+		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/aldeano_maestro.png
 		cost:100000 khrones
 		passive:multiply yield of Aldeano by 2
 		req:(Aldeano>=100)
@@ -1369,23 +1369,23 @@ Upgrades
 		desc:¡Cuidado con darles semillas de cacao!<//><b>Efecto:</b><.>Los <b><#0094FF>pingüinos</#></b> se quedan <b>5</b> segundos más en la pantalla.
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/pinguino_adorable_48.png
 		passive:multiply duration of Pinguino by 2
-		cost:3 EsmeraldaKhron
-		req:3 EsmeraldaKhron:earned
+		cost:10 EsmeraldaKhron
+		req:1 PinguinoClic
  
 	*PinguinoMejora2
 		name:Pinguino_Mejora2
 		desc:PinguinoMejora2<//><b>Efecto:</b><.>Los <b><#0094FF>pingüinos</#></b> aparecen un con un <b>10%</b> más de frecuencia.
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/pinguino_adorable_48.png
 		passive:multiply frequency of Pinguino by 0.9
-		cost:33 EsmeraldasKhron
-		req:33 EsmeraldaKhron:earned
+		cost:100 EsmeraldasKhron
+		req:10 PinguinoClic
  
 	*PinguinoMejora3
 		name:Conquistando la Antártida
 		desc:PinguinoMejora3<//><b>Efecto:</b><.>Los efectos de los <b><#0094FF>pingüinos</#></b> son el <b>doble</b> de poderosos.
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/pinguino_adorable_48.png
-		cost:333 EsmeraldasKhron
-		req:333 EsmeraldasKhron:earned
+		cost:1000 EsmeraldasKhron
+		req:100 PinguinoClic
 
 	//Mejoras del Loro
  
@@ -1394,23 +1394,23 @@ Upgrades
 		desc:¡Cuidado con darles semillas de cacao!<//><b>Efecto:</b><.>Los <b><#FF0000>loros</#></b> se quedan <b>5</b> segundos más en la pantalla.
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/loro_adorable_48.png
 		passive:multiply duration of Loro by 1.5
-		cost:7 EsmeraldasKhron
-		req:7 EsmeraldaKhron:earned
+		cost:10 EsmeraldasKhron
+		req:1 LoroClic
  
 	*LoroMejora2
 		name:Alpiste mágico
 		desc:Con un buen alpiste de calidad y un toque mágico, seguro que atraes loros a diestro y siniestro.<//><b>Efecto:</b><.>Los <b><#FF0000>loros</#></b> aparecen un con un <b>25%</b> más de frecuencia.
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/loro_adorable_48.png
 		passive:multiply frequency of Loro by 0.75
-		cost:77 EsmeraldasKhron
-		req:77 EsmeraldasKhron:earned
+		cost:100 EsmeraldasKhron
+		req:7 LoroClic
 
 	*LoroMejora3
 		name:Música mágica
 		desc:¡A los loros les encanta bailar y con la música que has puesto tienen ganas de compartir más!<//><b>Efecto:</b><.>Los efectos de los <b><#FF0000>loros</#></b> son el <b>triple</b> de poderosos.
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/loro_adorable_48.png
-		cost:777 EsmeraldasKhron
-		req:777 EsmeraldasKhron:earned
+		cost:1000 EsmeraldasKhron
+		req:50 LoroClic
 
 	//Mejoras del Corasonsito
  
@@ -1420,7 +1420,7 @@ Upgrades
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/corazon_arcoiris_48.png
 		passive:multiply duration of Corazon by 2
 		cost:10 EsmeraldasKhron
-		req:10 EsmeraldaKhron:earned
+		req:1 CorazonClic
  
 	*CorazonMejora2
 		name:Aquí estoy
@@ -1428,14 +1428,14 @@ Upgrades
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/corazon_arcoiris_48.png
 		passive:multiply frequency of Corazon by 0.5
 		cost:100 EsmeraldasKhron
-		req:100 EsmeraldaKhron:earned
+		req:5 CorazonClic
  
 	*CorazonMejora3
 		name:Sano y fuerte
 		desc:Aquí estoy... sano, y fuerte. ¡Y con un par de válvulas!<//><b>Efecto:</b><.>Los efectos de los <b><#BA212A>c</#><#E76935>o</#><#FBD52B>r</#><#74B833>a</#><#74B833>z</#><#2B62B0>o</#><#6B3293>n</#><#A5327B>e</#><#DE3163>s</#></b> son el <b>cuádruple</b> de poderosos.
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/corazon_arcoiris_48.png
 		cost:1000 EsmeraldasKhron
-		req:1000 EsmeraldasKhron:earned
+		req:25 CorazonClic
  
 Achievements
 	*TEMPLATE
