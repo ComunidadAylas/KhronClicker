@@ -719,47 +719,47 @@ Upgrades
 		req:(Cultivos>=25)
  
 	*AldeanoMejora1
-		name:Aldeano_Mejora1
-		desc:Aldeano_Mejora1<//><b>Efecto:</b><.>La producción de los Aldeanos se multiplica por <b>2</b>.
+		name:Aldeanos novatos
+		desc:¡Sube de nivel a los aldeanos para que ofrezcan más intercambios!<//><b>Efecto:</b><.>La producción de los Aldeanos se multiplica por <b>2</b>.
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/lingote_cobre.png
 		cost:1000 khrones
 		passive:multiply yield of Aldeano by 2
 		req:(Aldeano>=1)
  
 	*AldeanoMejora2
-		name:Aldeano_Mejora2
-		desc:Aldeano_Mejora2<//><b>Efecto:</b><.>La producción de los Aldeanos se multiplica por <b>2</b>.
+		name:Aldeanos aprendices
+		desc:¡Sube de nivel a los aldeanos para que ofrezcan más intercambios!<//><b>Efecto:</b><.>La producción de los Aldeanos se multiplica por <b>2</b>.
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/lingote_hierro.png
 		cost:10000 khrones
 		passive:multiply yield of Aldeano by 2
 		req:(Aldeano>=10)
  
 	*AldeanoMejora3
-		name:Aldeano_Mejora3
-		desc:Aldeano_Mejora3<//><b>Efecto:</b><.>La producción de los Aldeanos se multiplica por <b>2</b>.
+		name:Aldeanos oficiales
+		desc:¡Sube de nivel a los aldeanos para que ofrezcan más intercambios!<//><b>Efecto:</b><.>La producción de los Aldeanos se multiplica por <b>2</b>.
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/lingote_oro.png
 		cost:25000 khrones
 		passive:multiply yield of Aldeano by 2
 		req:(Aldeano>=25)
  
 	*AldeanoMejora4
-		name:Aldeano_Mejora4
-		desc:Aldeano_Mejora4<//><b>Efecto:</b><.>La producción de los Aldeanos se multiplica por <b>2</b>.
+		name:Aldeanos expertos
+		desc:¡Sube de nivel a los aldeanos para que ofrezcan más intercambios!<//><b>Efecto:</b><.>La producción de los Aldeanos se multiplica por <b>2</b>.
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/esmeralda_khron.png
 		cost:50000 khrones
 		passive:multiply yield of Aldeano by 2
 		req:(Aldeano>=50)
 
 	*AldeanoMejora5
-		name:Aldeano_Mejora5
-		desc:Aldeano_Mejora5<//><b>Efecto:</b><.>La producción de los Aldeanos se multiplica por <b>2</b>.
+		name:Aldeanos maestros
+		desc:¡Sube de nivel a los aldeanos para que ofrezcan más intercambios!<//><b>Efecto:</b><.>La producción de los Aldeanos se multiplica por <b>2</b>.
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/diamante_khron.png
 		cost:100000 khrones
 		passive:multiply yield of Aldeano by 2
 		req:(Aldeano>=100)
 
 	*AldeanoMejoraFinal
-		name:Super Aldeanos
+		name:Super aldeanos
 		desc:Los aldeanos ahora trabajan también en los cultivos y en los negocios de Khron.<//><b>Efecto:</b><.>Los Aldeanos son el <b>doble</b> de eficientes produciendo esmeraldas. <.>La producción de los Cultivos se multiplica por <b>1,5</b>. <.>La producción de los Negocios se multiplica por <b>1,5</b>.
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/cafe.png
 		cost:200000 khrones, 5000 EsmeraldasKhron
@@ -1606,32 +1606,32 @@ Achievements
 	//Logros de esmeraldas por segundo
 
 	*EsmeraldaSegundo1
-		name:EsmeraldaSegundo1
+		name:Mis primeras esmeraldas
 		desc:Produce <b><#5AC552>1 esmeralda de Khron</#></b> por segundo.
 		req:1 EsmeraldaKhron per second
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/insignia_verde_1_reloj.png
 	*EsmeraldaSegundo2
-		name:EsmeraldaSegundo2
+		name:Iniciándose en el mundillo
 		desc:Produce <b><#5AC552>10 esmeraldas de Khron</#></b> por segundo.
 		req:10 EsmeraldasKhron per second
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/insignia_verde_2_reloj.png
 	*EsmeraldaSegundo3
-		name:EsmeraldaSegundo3
+		name:Esmeraldas por doquier
 		desc:Produce <b><#5AC552>50 esmeraldas de Khron</#></b> por segundo.
 		req:50 EsmeraldaKhron per second
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/insignia_verde_3_reloj.png
 	*EsmeraldaSegundo4
-		name:EsmeraldaSegundo4
+		name:Esmeraldas a mansalva
 		desc:Produce <b><#5AC552>100 esmeraldas de Khron</#></b> por segundo.
 		req:100 EsmeraldaKhron per second
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/insignia_verde_4_reloj.png
 	*EsmeraldaSegundo5
-		name:EsmeraldaSegundo5
+		name:Esmeraldas a diestro y siniestro
 		desc:Produce <b><#5AC552>500 esmeraldas de Khron</#></b> por segundo.
 		req:500 EsmeraldaKhron per second
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/esmeralda_khron_reloj.png
 	*EsmeraldaSegundo6
-		name:EsmeraldaSegundo6
+		name:Lluvia de esmeraldas
 		desc:Produce <b><#5AC552>1.000 esmeraldas de Khron</#></b> por segundo.
 		req:1000 EsmeraldaKhron per second
 		icon:https://raw.githubusercontent.com/ComunidadAylas/KhronClicker/master/Imagenes/bloque_esmeralda_reloj.png
