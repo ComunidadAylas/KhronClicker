@@ -12,7 +12,7 @@ idle game oficial de Khron, el servidor de Minecraft de la Comunidad Aylas.
 🚧 Por ahora se encuentra en **tempranos estados de construcción**, pero ¡puedes probar
 su última versión cuando quieras!
 
-<div align="center"><a href="http://clicker.khron.aylas.org/"><b>clicker.khron.aylas.org</b></div>
+<div align="center"><a href="https://clicker.khron.aylas.org/"><b>clicker.khron.aylas.org</b></div>
 
 ## 🔎 Descripción general
 
